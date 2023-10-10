@@ -1,0 +1,22 @@
+{
+  "data": {
+    "players": [
+      {
+        "name": "All",
+        "tier": ""
+      },
+      {
+        "name": "JEFF CAT",
+        "tier": "A"
+      },
+      {
+        "name": "Kevin Winwood",
+        "tier": "B"
+      },
+      {
+        "name": "Matt Winwood",
+        "tier": "C"
+      }
+    ]
+  }
+}
