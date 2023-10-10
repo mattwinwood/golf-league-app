@@ -2,7 +2,7 @@
   <main class="row">
 
 
-    <div class="col-3 bg-gray-400">
+    <div class="col-3 bg-gray-900">
       <a class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
          href="/">
         <span class="fs-5 fw-semibold">League Schedule</span>
@@ -14,13 +14,14 @@
 
     <div class="col-3">
       <div class="flex flex-grow">
-        <a class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
-           href="/">
+        <div class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
+           >
           <span class="fs-5 fw-semibold">Scorecards</span>
-        </a>
+          <input  v-model="filterValue" class="m-1" placeholder="Filter Results"/>
+        </div>
       </div>
       <div class="list-group list-group-flush border-bottom scrollarea">
-        <ListItem :list="results" :active="activeCourse" @handleFilter="(card) => getScorecard(card)"/>
+        <ListItem :list="filteredResults" :active="activeCourse" @handleFilter="(card) => getScorecard(card)"/>
       </div>
     </div>
 
@@ -85,10 +86,14 @@ const players = ref([])
 const courses = ref([])
 const results = ref([])
 const activeCourse = ref('')
+const isDuplicate = ref([]);
 const csvData = ref('');
+const filterValue = ref('')
+const filteredResults = ref([])
 
 scorecards.value = data.node.scorecards.items
 results.value = data.node.scorecards.items
+filteredResults.value = data.node.scorecards.items
 players.value = playerData.data.players
 courses.value = courseData.data.courses
 
@@ -147,9 +152,28 @@ const getAllScorecards = () => {
     results.value.forEach((record) => {  // Assuming you have results.value available
       getScorecard(record);
     });
+    filteredResults.value = results.value;
+    filterValue.value = '';
+
   }
 };
 
+watch(
+  () => filterValue.value,
+  async (val) => {
+  filteredResults.value = results.value.filter(item => {
+    if(item.player && item.player.name) {
+      return item.player.name.toLowerCase().includes(val)
+    }
+    else if(item.player && item.player[0]) {
+      return item.player[0].name.toLowerCase().includes(val)
+    }
+
+    })
+
+
+  }
+);
 
 
 
@@ -169,7 +193,8 @@ function mapRecord(record) {
 
 }
 
-function mapHole(hole) {
+function filterResults(value) {
+
 
 }
 

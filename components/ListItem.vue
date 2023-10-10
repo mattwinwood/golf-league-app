@@ -9,9 +9,10 @@
               'mx-2 badge capitalize', scorecard.isCompleted ? 'bg-success' : 'bg-danger']">{{ scorecard.isCompleted ? 'Complete' : 'Incomplete' }}</span>
 
         </h1>
-        <ul>
+        <ul style="list-style: none; padding: 0; margin: 0;">
           <li><b>Course: </b>{{ scorecard.course.displayName }}</li>
           <li><b>Date: </b>{{ new Date(scorecard.createdAt).toLocaleDateString('en-us', {weekday: "short", year: "numeric", month: "short", day: "numeric"}) }}</li>
+          <li v-if="hasDuplicateProperty(scorecard.player.name) > 1" style="color: orangered"><b>Found Multiple Records ({{hasDuplicateProperty(scorecard.player.name)}})</b></li>
         </ul>
       </div>
     </a>
@@ -19,7 +20,13 @@
 <script setup>
 
 const props = defineProps({ list: {type: Array, default: []}, active: {type: String, default: ''}})
-const emit = defineEmits(['handleFilter'])
-
+const emit = defineEmits([ 'handleFilter'])
+function hasDuplicateProperty(value) {
+  const results = props.list.filter(item => item.player.name.toLowerCase().trim() === value.toLowerCase().trim())
+  if(results.length > 0) {
+    console.log("result",results);
+  }
+  return results.length
+}
 
 </script>
