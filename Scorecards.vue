@@ -2,26 +2,18 @@
   <main class="row">
 
 
-    <div class="col-3 bg-gray-900">
-      <a class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
-         href="/">
-        <span class="fs-5 fw-semibold">League Schedule</span>
-      </a>
-      <div class="list-group list-group-flush border-bottom scrollarea">
-      <CourseItem :active="activeCourse" :courses="courses" @handleFilter="(id) => filterByCourse(id)"/>
-        </div>
-    </div>
 
     <div class="col-3">
       <div class="flex flex-grow">
         <div class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
            >
           <span class="fs-5 fw-semibold">Scorecards</span>
-          <input  v-model="filterValue" class="m-1" placeholder="Filter Results"/>
         </div>
       </div>
-      <div class="list-group list-group-flush border-bottom scrollarea">
-        <ListItem :list="filteredResults" :active="activeCourse" @handleFilter="(card) => getScorecard(card)"/>
+      <div class="text-white list-group list-group-flush border-bottom scrollarea">
+        <!-- Deployment list -->
+
+
       </div>
     </div>
 
@@ -78,6 +70,15 @@ import CourseItem from "./components/CourseItem.vue";
 import ListItem from "./components/ListItem.vue";
 import csvHelpers from './helpers/csvHelper.js'
 
+
+const props = defineProps({
+                            filterValue: {
+                              type: String,
+                              default: ''
+                            },
+                          })
+const emit = defineEmits(["handleFilterValue"]);
+
 import ScorecardComponent from "./components/ScorecardComponent.vue";
 import GolfScorecard from "./helpers/GolfScorecard.ts"
 const scorecards = ref([])
@@ -88,7 +89,6 @@ const results = ref([])
 const activeCourse = ref('')
 const isDuplicate = ref([]);
 const csvData = ref('');
-const filterValue = ref('')
 const filteredResults = ref([])
 
 scorecards.value = data.node.scorecards.items
@@ -153,13 +153,13 @@ const getAllScorecards = () => {
       getScorecard(record);
     });
     filteredResults.value = results.value;
-    filterValue.value = '';
+    emit('handleFilterValue', '');
 
   }
 };
 
 watch(
-  () => filterValue.value,
+  () => props.filterValue,
   async (val) => {
   filteredResults.value = results.value.filter(item => {
     if(item.player && item.player.name) {

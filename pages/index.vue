@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Scorecards/>
+
   </div>
 </template>
 <script>
-import Scorecards from "./Scorecards.vue";
+import Scorecards from "../Scorecards.vue";
 export default {
   components: {Scorecards}
 }

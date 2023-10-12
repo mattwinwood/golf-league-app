@@ -56,7 +56,9 @@ export default {
     let data = ''
     data += this.extractCourseDetails(scorecard)
     data += this.extractTeeDetails(scorecard)
-    data += this.extractPlayerScores(scorecard)
+    const playersMap = this.extractPlayerScores(scorecard)
+    const csvScoreData = this.getCsvContent(playersMap)
+    data += csvScoreData
     return data
   },
 
@@ -92,6 +94,9 @@ export default {
         }
       }
     }
+    return playersMap
+  },
+  getCsvContent(playersMap){
 
     let csvContent = ''
     csvContent += "Hole, 1, 2, 3, 4, 5, 6, 7, 8, 9, Total Score\n";

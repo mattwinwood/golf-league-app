@@ -1,31 +1,83 @@
 <template>
-    <a v-for="(scorecard, i) in props.list"
-       :class="['list-group-item list-group-item-action py-3 lh-tight', scorecard.course.displayName === props.active && 'ctive']"
-       aria-current="false"
-       @click="emit('handleFilter', scorecard)">
-      <div class="flex w-100 align-items-center w-full flex-grow justify-content-between">
-        <h1 class="flex flex-shrink-0" style="font-size: 18px; text-transform: uppercase; white-space: nowrap; font-weight: 600;">{{ scorecard.player.name }}
-          <span :class="[
-              'mx-2 badge capitalize', scorecard.isCompleted ? 'bg-success' : 'bg-danger']">{{ scorecard.isCompleted ? 'Complete' : 'Incomplete' }}</span>
+  <ul role="list" class="divide-y divide-white/5">
+    <li v-for="(scorecard, i) in props.list"
+        aria-current="false"
+        @click="emit('handleFilter', scorecard)"
+        :key="i" :class="['hover:bg-slate-900 bg-opacity-75 cursor-pointer relative flex items-center space-x-4 px-4 py-4 sm:px-6 lg:px-8']">
+      <div class="min-w-0 w-full flex-grow flex-auto">
+        <div class="flex items-center gap-x-2">
 
-        </h1>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li><b>Course: </b>{{ scorecard.course.displayName }}</li>
-          <li><b>Date: </b>{{ new Date(scorecard.createdAt).toLocaleDateString('en-us', {weekday: "short", year: "numeric", month: "short", day: "numeric"}) }}</li>
-          <li v-if="hasDuplicateProperty(scorecard.player.name) > 1" style="color: orangered"><b>Found Multiple Records ({{hasDuplicateProperty(scorecard.player.name)}})</b></li>
-        </ul>
+          <div :class="['flex-none rounded-full p-1', props.active === scorecard.id ? 'animate-pulse text-green-400 bg-green-400/20': ' text-gray-400 bg-gray-100/20']">
+            <div class="h-2 w-2 rounded-full bg-current" />
+          </div>
+          <h2 class="min-w-0 text-sm font-semibold leading-6 text-white">
+            <a  class="flex gap-x-2">
+              <span :class="['truncate', props.active === scorecard.id && 'text-green-400']">{{ scorecard.player.name }}</span>
+              <span class="text-gray-400">/</span>
+              <span :class="['truncate', props.active === scorecard.id && 'text-green-400']">{{ scorecard.course.displayName }}</span>
+              <span v-if="hasDuplicateProperty(scorecard.player.name) > 1" class="text-gray-400">/</span>
+              <span :class="['truncate', props.active === scorecard.id && 'text-green-400']">{{ new Date(scorecard.createdAt).toLocaleDateString('en-us', {weekday: "short", year: "numeric", month: "short", day: "numeric"})  }}</span>
+
+            </a>
+          </h2>
+        </div>
+        <div class="mt-3 flex items-center gap-x-2.5 text-sm leading-5 text-gray-400">
+          <div class="tag">
+                        <span v-if="scorecard.isCompleted" class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+              <svg class="h-1.5 w-1.5 fill-green-400" viewBox="0 0 6 6" aria-hidden="true">
+                <circle cx="3" cy="3" r="3" />
+              </svg>
+          Completed Round
+            </span>
+            <span v-else class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+              <svg class="h-1.5 w-1.5 fill-red-400" viewBox="0 0 6 6" aria-hidden="true">
+                <circle cx="3" cy="3" r="3" />
+              </svg>
+            Incomplete Round
+            </span>
+
+            <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+              <svg class="h-1.5 w-1.5 fill-red-400" viewBox="0 0 6 6" aria-hidden="true">
+                <circle cx="3" cy="3" r="3" />
+              </svg>
+              Missing League Payment
+            </span>
+             <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+              <svg class="h-1.5 w-1.5 fill-yellow-400" viewBox="0 0 6 6" aria-hidden="true">
+                <circle cx="3" cy="3" r="3" />
+              </svg>
+              Skins
+            </span>
+             <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+              <svg class="h-1.5 w-1.5 fill-blue-400" viewBox="0 0 6 6" aria-hidden="true">
+                <circle cx="3" cy="3" r="3" />
+              </svg>
+              Closest to the Pin
+            </span>
+            <span v-if="hasDuplicateProperty(scorecard.player.name) > 1" class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+              <svg class="h-1.5 w-1.5 fill-gray-400" viewBox="0 0 6 6" aria-hidden="true">
+                <circle cx="3" cy="3" r="3" />
+              </svg>
+            {{hasDuplicateProperty(scorecard.player.name)}} Matches
+            </span>
+          </div>
+
+        </div>
       </div>
-    </a>
+
+
+      <ChevronRightIcon :class="[props.active === scorecard.id ? 'text-green-400 bg-green-400/10': ' text-gray-400 bg-gray-400/10', 'h-5 w-5 flex-none text-gray-400']" aria-hidden="true" />
+    </li>
+  </ul>
+
 </template>
 <script setup>
+import { Bars3Icon, ChevronRightIcon, ChevronUpDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 
 const props = defineProps({ list: {type: Array, default: []}, active: {type: String, default: ''}})
 const emit = defineEmits([ 'handleFilter'])
 function hasDuplicateProperty(value) {
   const results = props.list.filter(item => item.player.name.toLowerCase().trim() === value.toLowerCase().trim())
-  if(results.length > 0) {
-    console.log("result",results);
-  }
   return results.length
 }
 
