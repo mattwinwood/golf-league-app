@@ -3,7 +3,7 @@
     <li v-for="(scorecard, i) in props.list"
         aria-current="false"
         @click="emit('handleFilter', scorecard)"
-        :key="i" :class="['hover:bg-slate-900 bg-opacity-75 cursor-pointer relative flex items-center space-x-4 px-4 py-4 sm:px-6 lg:px-8']">
+        :key="i" :class="[props.active === scorecard.id && 'bg-gray-700', 'hover:bg-slate-900 bg-opacity-75 cursor-pointer relative flex items-center space-x-4 px-4 py-4 sm:px-6 lg:px-8']">
       <div :id="scorecard.id" class="min-w-0 w-full flex-grow flex-auto">
         <div class="flex items-center gap-x-2">
 
