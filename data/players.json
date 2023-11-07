@@ -1,644 +1,526 @@
 {
   "data": {
-    "players": [
+    "players":[
       {
-        "name": "All",
-        "tier": ""
+        "userName": "Andrewcaudill",
+        "realName": "Andy Caudill",
+        "flight": "A",
+        "handicap": 3,
+        "notes": ""
       },
       {
-        "id": 1,
-        "name": "Kaylee Falk",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Joey bad eyes 2",
+        "realName": "Joe Bourdage",
+        "flight": "A",
+        "handicap": 4,
+        "notes": ""
       },
       {
-        "id": 2,
-        "name": "TIm Gallagher",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Steve-O33",
+        "realName": "Steve Myers",
+        "flight": "A",
+        "handicap": 5,
+        "notes": ""
       },
       {
-        "id": 3,
-        "name": "Vic Falk",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "JPatton2522",
+        "realName": "Jared Patton",
+        "flight": "A",
+        "handicap": 2,
+        "notes": ""
       },
       {
-        "id": 4,
-        "name": "Corey Amaya",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "TIm Gallagher",
+        "realName": "Tim Gallagher",
+        "flight": "A",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 5,
-        "name": "JPatton2522",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Steve786",
+        "realName": "Steve Skowronek",
+        "flight": "A",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 6,
-        "name": "Andrewcaudill",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Kevin Winwood",
+        "realName": "Kevin Winwood",
+        "flight": "A",
+        "handicap": 5,
+        "notes": ""
       },
       {
-        "id": 7,
-        "name": "Joey bad eyes 2",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "JeffCat",
+        "realName": "Jeff Catanzarite",
+        "flight": "A",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 8,
-        "name": "Josiah",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "srkorb",
+        "realName": "Steve Korb",
+        "flight": "A",
+        "handicap": 5,
+        "notes": ""
       },
       {
-        "id": 9,
-        "name": "JTC45",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Vic Falk",
+        "realName": "Vic Falk",
+        "flight": "A",
+        "handicap": 3,
+        "notes": ""
       },
       {
-        "id": 10,
-        "name": "Eerrok11",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [{
-          "course": "",
-          "courseId": 11,
-          "distance": ""
-        }],
-        "paid": false
+        "userName": "Haddy719",
+        "realName": "Chad Barnett",
+        "flight": "A",
+        "handicap": 4,
+        "notes": ""
       },
       {
-        "id": 11,
-        "name": "Steve786",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "ToddDirling",
+        "realName": "Todd Dirling",
+        "flight": "A",
+        "handicap": 5,
+        "notes": ""
       },
       {
-        "id": 12,
-        "name": "Kevin Winwood",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "D.Manning",
+        "realName": "Dylan Manning",
+        "flight": "A",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 13,
-        "name": "D.Manning",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Josiah",
+        "realName": "Josiah Nowak",
+        "flight": "A",
+        "handicap": 2,
+        "notes": ""
       },
       {
-        "id": 14,
-        "name": "srkorb",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "ed15642",
+        "realName": "Ed Waibel",
+        "flight": "A",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 15,
-        "name": "Matt Winwood",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "matthew irwin",
+        "realName": "Matt Irwin",
+        "flight": "A",
+        "handicap": 3,
+        "notes": ""
       },
       {
-        "id": 16,
-        "name": "Haddy719",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Tim Boo",
+        "realName": "Tim Booher",
+        "flight": "A",
+        "handicap": 5,
+        "notes": ""
       },
       {
-        "id": 17,
-        "name": "Steve-O33",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Ryan Neel",
+        "realName": "Ryan Neel",
+        "flight": "A",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 18,
-        "name": "Jon Wik",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "ArnoldPalmer",
+        "realName": "Brett Greenier",
+        "flight": "A",
+        "handicap": 5,
+        "notes": ""
       },
       {
-        "id": 19,
-        "name": "Ryan_Putters35",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "JTC45",
+        "realName": "James Carney",
+        "flight": "A",
+        "handicap": 2,
+        "notes": ""
       },
       {
-        "id": 20,
-        "name": "Mark Borger",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "closestToThePin": [],
-        "paid": false
+        "userName": "Justin Dickert",
+        "realName": "Justin Dickert",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 21,
-        "name": "ammondom",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "dpici",
+        "realName": "Dylan Pici",
+        "flight": "B",
+        "handicap": 6,
+        "notes": ""
       },
       {
-        "id": 22,
-        "name": "Justin Dickert",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Glenn Grasha",
+        "realName": "Glenn Grasha",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 23,
-        "name": "Chasing Bogeys",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "ammondom",
+        "realName": "Dominic Ammon",
+        "flight": "B",
+        "handicap": 7,
+        "notes": ""
       },
       {
-        "id": 24,
-        "name": "Joel D.",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Corey Amaya",
+        "realName": "Corey Amaya",
+        "flight": "B",
+        "handicap": 7,
+        "notes": ""
       },
       {
-        "id": 25,
-        "name": "Lippy0213",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Eerrok11",
+        "realName": "Eric Hampton",
+        "flight": "B",
+        "handicap": 7,
+        "notes": ""
       },
       {
-        "id": 26,
-        "name": "Joe Dyce",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Ga",
+        "realName": "Glenn Reed",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 27,
-        "name": "Ryan Neel",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Tjdub",
+        "realName": "Ty Webb",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 28,
-        "name": "dpici",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Paul Bug",
+        "realName": "Paul Bugajski",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 29,
-        "name": "JeffCat",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Taylor Hoffman",
+        "realName": "NO RECORD",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 30,
-        "name": "Fore on the green",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Gatti",
+        "realName": "Steve Gatti",
+        "flight": "B",
+        "handicap": 7,
+        "notes": ""
       },
       {
-        "id": 31,
-        "name": "Holder2",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Kaylee Falk",
+        "realName": "Kaylee Falk",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 32,
-        "name": "Ga",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "garrett staff",
+        "realName": "Garrett Staff",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 33,
-        "name": "zcho66",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "dpelczar",
+        "realName": "Dan Pelczar",
+        "flight": "B",
+        "handicap": 9,
+        "notes": ""
       },
       {
-        "id": 34,
-        "name": "Gatti",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Joe Dyce",
+        "realName": "Joe Fordyce",
+        "flight": "B",
+        "handicap": 7,
+        "notes": ""
       },
       {
-        "id": 35,
-        "name": "Paul Bug",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Jon Wik",
+        "realName": "Jon Wik",
+        "flight": "B",
+        "handicap": 9,
+        "notes": ""
       },
       {
-        "id": 36,
-        "name": "Jake Bobak",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Jake Bobak",
+        "realName": "Jake Bobak",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 37,
-        "name": "Glenn Grasha",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "zcho66",
+        "realName": "Zach Davison",
+        "flight": "B",
+        "handicap": 9,
+        "notes": ""
       },
       {
-        "id": 38,
-        "name": "Neeno",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Matt Winwood",
+        "realName": "Matt Winwood",
+        "flight": "B",
+        "handicap": 8,
+        "notes": ""
       },
       {
-        "id": 39,
-        "name": "DrDoback",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "HOLDERBAUM",
+        "realName": "Rob Holderbaum",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 40,
-        "name": "ToddDirling",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "mswankler",
+        "realName": "Marc Swankler",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 41,
-        "name": "Karen Irwin",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Ryan_Putters35",
+        "realName": "Ryan Peters",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 42,
-        "name": "Shauna Caudill",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Shauna Caudill",
+        "realName": "Shauna Caudill",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 43,
-        "name": "Smokey",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Jason Pechunka",
+        "realName": "Jason Pechunka",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 44,
-        "name": "BLizZz2",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Player 1",
+        "realName": "Rob Vasko",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 45,
-        "name": "Natewoh",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "kylegeller10",
+        "realName": "Kyle Geller",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 46,
-        "name": "Snake Blitzken",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "STEVE BUSCHE",
+        "realName": "Steve Busche",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 47,
-        "name": "awingard29",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "FLOAT",
+        "realName": "Mike Float",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 48,
-        "name": "mswankler",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Lippy0213",
+        "realName": "Bill Lipsky",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 49,
-        "name": "FLOAT",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Beef Stew",
+        "realName": "Jeff Stewart",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 50,
-        "name": "STEVE BUSCHE",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Joel D.",
+        "realName": "Joel DeFelice",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 51,
-        "name": "Captain Consript",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Snake Blitzken",
+        "realName": "Jake DeFelice",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 52,
-        "name": "kylegeller10",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Holder2",
+        "realName": "Dan Holder",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 53,
-        "name": "Joseph D.D",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Mark Borger",
+        "realName": "Mark Borger",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 54,
-        "name": "Jason Pechunka",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Neeno",
+        "realName": "Mike Steffenino",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 55,
-        "name": "Beef Stew",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Shaun Kovac",
+        "realName": "Shaun Kovac",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 56,
-        "name": "Shaun Kovac",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "DrDoback",
+        "realName": "Dan Birdseye",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 57,
-        "name": "TED BUSCHE",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Captain Consript",
+        "realName": "Sean Darby",
+        "flight": "C",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 58,
-        "name": "Brandon F",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Gmd658",
+        "realName": "Grant Darby",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 59,
-        "name": "Jeremy S. Bucklew",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "JCarns",
+        "realName": "Justin Caras",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 60,
-        "name": "H",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Karen Irwin",
+        "realName": "Karen Irwin",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 61,
-        "name": "Snoburn",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "TED BUSCHE",
+        "realName": "Ted Busche",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 62,
-        "name": "Darlene52",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "LeeAnnZ",
+        "realName": "LeeAnn Zeise",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
       },
       {
-        "id": 63,
-        "name": "JCarns",
-        "tier": "",
-        "handicap": 0.0,
-        "skins": [],
-        "notes": "",
-        "ClosestToThePin": [],
-        "paid": false
+        "userName": "Jeremy Bucklew",
+        "realName": "Jeremy S. Bucklew",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "STate04",
+        "realName": "Sean Tate",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "Joseph D.D",
+        "realName": "Joe DeFelice",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "HEATHER LOWE",
+        "realName": "Heather Lowe",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "Snoburn",
+        "realName": "Dylan Arrabito",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "awingard29",
+        "realName": "Anna Wingard",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "chasing quads",
+        "realName": "Ashley Edmondson",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "Cody Stark",
+        "realName": "Cody Stark",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "Brandon F",
+        "realName": "Brandon Ferrari",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "Darlene52",
+        "realName": "Darlene Skupien",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
+      },
+      {
+        "userName": "Mcat",
+        "realName": "Meg Catanzarite",
+        "flight": "D",
+        "handicap": "",
+        "notes": ""
       }
+
     ]
+
   }
 }

@@ -129,6 +129,8 @@
       </div>
     </div>
 
+
+
     <!-- MAIN CONTENT AREA -->
     <div class="xl:pl-72">
 
@@ -150,15 +152,17 @@
       </div>
 
       <!--  RECORD LIST   -->
-      <main :class="[scorecard && 'lg:pr-[600px]']">
+      <main :class="[scorecard && 'lg:pr-[0px]']">
         <header class="flex items-center justify-between border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <h1 class="text-base font-semibold leading-7 text-white">{{activeCourse !== 'All' ? 'Scorecards for ' + activeCourse : 'All Scorecards'}}
             <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium ml-2 text-gray-200 ring-1 ring-inset ring-indigo-400/20"> {{filteredResults && filteredResults.length}} Results</span>
                                                                   </h1>
 
-
           <!-- Sort dropdown -->
-          <Menu as="div" class="relative">
+          <Menu as="div" class="relative flex gap-4">
+            <MenuButton class="flex text-sm font-medium leading-6 text-indigo-500" @click="generateReport()">
+              Create Full Report
+            </MenuButton>
             <MenuButton class="flex items-center gap-x-1 text-sm font-medium leading-6 text-white">
               Sort by
               <ChevronUpDownIcon class="h-5 w-5 text-gray-500" aria-hidden="true" />
@@ -182,6 +186,10 @@
           </Menu>
         </header>
 
+
+        <div class="text-white"  v-if="router.currentRoute.value.name === 'players'">
+          <PlayerItem :list="players" :active="players[0]"  @handleFilter="(card) => getScorecard(card)"/>
+        </div>
        <div v-if="activeCourse.toLowerCase() !== 'all'">
         <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecard(card)"/>
        </div>
@@ -191,7 +199,7 @@
       </main>
 
       <!-- RECORD DETAIL -->
-      <aside v-if="scorecard" class="bg-black/10 lg:fixed lg:bottom-0 lg:right-0 lg:top-16 lg:w-[600px] lg:overflow-y-auto lg:border-l lg:border-white/5">
+      <aside v-if="scorecard" class="hidden bg-black/10 lg:fixed lg:bottom-0 lg:right-0 lg:top-16 lg:w-[600px] lg:overflow-y-auto lg:border-l lg:border-white/5">
         <header class="flex items-center justify-between border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <h2 class="text-base font-semibold leading-7 text-white">{{}}</h2>
           <span class="isolate inline-flex rounded-md shadow-sm justify-center mx-auto">
@@ -208,7 +216,7 @@
         </header>
 
         <!--   DETAIL CONTENT     -->
-        <ul role="list" class="divide-y divide-white/5 text-white border-white">
+        <ul role="list"  class="hidden divide-y divide-white/5 text-white border-white">
           <template v-for="(item, i) in [...new Map(scorecard.map(v => [v.id, v])).values()]">
             <template v-for="(record, i) in item.records">
               <table class="min-w-full divide-y divide-gray-300 m-4 flex flex-grow w-full border-white">
@@ -246,15 +254,19 @@
 
 <script setup>
 import { ref } from 'vue'
+const router = useRouter();
 import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems, TransitionChild, TransitionRoot, } from '@headlessui/vue'
 import { ChartBarSquareIcon, Cog6ToothIcon, FolderIcon, GlobeAltIcon, ServerIcon, SignalIcon, XMarkIcon, } from '@heroicons/vue/24/outline'
 import { Bars3Icon, ChevronRightIcon, ChevronUpDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import ListItem from "../components/ListItem.vue";
+import PlayerItem from "../components/PlayerItem.vue";
 import Scorecards from "../Scorecards.vue";
 import courseData from '/data/courses.json'
-import playerData from '/data/players.json'
 import {data} from '/data/scorecards.json'
 import csvHelpers from '/helpers/csvHelper.js'
+import playerData from '/data/players.json'
+
+
 
 // DISPLAY LOGIC
 const footerActive = ref(false)
@@ -268,7 +280,6 @@ const scorecards = ref([])
 const scorecard = ref([])
 const adjustedScorecard = ref([])
 const scorecardsByCourse = ref([])
-
 // LOCAL DATA
 const activeRecord = ref('')
 const activeCourse = ref('All')
@@ -304,6 +315,7 @@ async function getScorecard(record) {
 
   scorecard.value.push(requestScorecard);
   const data = csvHelpers.extractPlayerScores(scorecard)
+  generateReportBySelected();
   adjustedScorecard.value.push(data);
 }
 
@@ -311,8 +323,8 @@ async function getScorecard(record) {
 const getAllScorecards = () => {
   const alert = confirm("Are you sure you want to request " + results.value.length.toString() + " record(s)?");
   if (alert) {
-    if(results.value.length > 100) {
-      confirm("You cannot request over 100 records at a time. Call Matt.");
+    if(results.value.length > 200) {
+      confirm("You cannot request over 200 records at a time. Call Matt.");
       return
     }
     scorecard.value = [];

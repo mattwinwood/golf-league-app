@@ -29,7 +29,9 @@ export default {
           const gender = tee.gender;
           if (!teesMap.has(gender)) {
             teesMap.set(gender, {
-              distances
+              distances,
+              pars,
+              strokeIndexes
             });
           }
         }
@@ -50,12 +52,13 @@ export default {
     console.log("", strokeIndexes);
     csvContent += `Handicap, ${strokeIndexes.join(", ")}\n`;
 
-    return csvContent;
+    return {csvContent, teesMap};
   },
   generateCsv(scorecard){
     let data = ''
+    const teeData = this.extractTeeDetails(scorecard)
     data += this.extractCourseDetails(scorecard)
-    data += this.extractTeeDetails(scorecard)
+    data += teeData.csvContent
     const playersMap = this.extractPlayerScores(scorecard)
     const csvScoreData = this.getCsvContent(playersMap)
     data += csvScoreData
@@ -64,6 +67,8 @@ export default {
 
   extractPlayerScores(scorecard)  {
     const playersMap = new Map();
+    const teeData = this.extractTeeDetails(scorecard)
+    const pars = teeData.teesMap.entries().next().value[1].pars;
 
     for (const response of scorecard.value) {
       for (const record of response.records) {
@@ -72,7 +77,7 @@ export default {
         for (let i = 1; i <= 9; i++) {
           const hole = record.holes.find(h => h.holeNumber === i);
           if (hole) {
-            const adjustedScore = this.adjustScore(hole.holeNumber, hole.grossScore);
+            const adjustedScore = this.adjustScore(pars[i-1], hole.grossScore);
             holeScores.push(adjustedScore);
           }
         }
@@ -110,18 +115,13 @@ export default {
 
     switch (holeNumber) {
       case 3:
-      case 4:
-      case 5:
-        return Math.min(grossScore, 6);
-      case 1:
-      case 2:
-      case 6:
-      case 7:
-      case 8:
-      case 9:
         return Math.min(grossScore, 7);
-      default:
+      case 4:
         return Math.min(grossScore, 8);
+      case 5:
+        return Math.min(grossScore, 9);
+      default:
+        return Math.min(grossScore, 9);
     }
   }
 }

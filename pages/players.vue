@@ -1,9 +1,11 @@
 <template>
-  <div>
-    players
+  <div class="text-white">
+    <p class="text-white text-xl"> HELLO</p>
+
   </div>
 </template>
 <script>
-export default {
-}
+import {ref} from "vue";
+
+
 </script>
