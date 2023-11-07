@@ -4,20 +4,21 @@
         aria-current="false"
         @click="emit('handleFilter', scorecard)"
         :key="i" :class="['hover:bg-slate-900 bg-opacity-75 cursor-pointer relative flex items-center space-x-4 px-4 py-4 sm:px-6 lg:px-8']">
-      <div class="min-w-0 w-full flex-grow flex-auto">
+      <div :id="scorecard.id" class="min-w-0 w-full flex-grow flex-auto">
         <div class="flex items-center gap-x-2">
 
           <div :class="['flex-none rounded-full p-1', props.active === scorecard.id ? 'animate-pulse text-green-400 bg-green-400/20': ' text-gray-400 bg-gray-100/20']">
             <div class="h-2 w-2 rounded-full bg-current" />
           </div>
           <h2 class="min-w-0 text-sm font-semibold leading-6 text-white">
-            <a  class="flex gap-x-2">
-              <span :class="['truncate', props.active === scorecard.id && 'text-green-400']">{{ scorecard.player.name }}</span>
-              <span class="text-gray-400">/</span>
-              <span :class="['truncate', props.active === scorecard.id && 'text-green-400']">{{ scorecard.course.displayName }}</span>
-              <span v-if="hasDuplicateProperty(scorecard.player.name) > 1" class="text-gray-400">/</span>
-              <span :class="['truncate', props.active === scorecard.id && 'text-green-400']">{{ new Date(scorecard.createdAt).toLocaleDateString('en-us', {weekday: "short", year: "numeric", month: "short", day: "numeric"})  }}</span>
-
+            <a  class="flex">
+              <span :class="['truncate text-xl font-light', props.active === scorecard.id && 'text-green-400']">{{ getPlayerFullName(scorecard.player.name) }} <span class="font-semibold text-sm italic">({{scorecard.player.name}})</span></span>
+              <div class="">
+              <span class="text-gray-400 mx-2 text-xl">@</span>
+              <span :class="['truncate font-light text-lg', props.active === scorecard.id && 'text-green-400']"> {{ scorecard.course.displayName }}</span>
+              <span class="text-gray-400 mx-2 w-2">on</span>
+              <span :class="['truncate -mt-1', props.active === scorecard.id && 'text-green-400']"> {{ new Date(scorecard.createdAt).toLocaleDateString('en-us', {weekday: "short", year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "numeric"})  }}</span>
+              </div>
             </a>
           </h2>
         </div>
@@ -36,19 +37,19 @@
             Incomplete Round
             </span>
 
-            <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+            <span class="hidden inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
               <svg class="h-1.5 w-1.5 fill-red-400" viewBox="0 0 6 6" aria-hidden="true">
                 <circle cx="3" cy="3" r="3" />
               </svg>
               Missing League Payment
             </span>
-             <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+             <span class="hidden inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
               <svg class="h-1.5 w-1.5 fill-yellow-400" viewBox="0 0 6 6" aria-hidden="true">
                 <circle cx="3" cy="3" r="3" />
               </svg>
               Skins
             </span>
-             <span class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
+             <span class="hidden inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">
               <svg class="h-1.5 w-1.5 fill-blue-400" viewBox="0 0 6 6" aria-hidden="true">
                 <circle cx="3" cy="3" r="3" />
               </svg>
@@ -71,14 +72,31 @@
   </ul>
 
 </template>
-<script setup>
+<script setup lang="ts">
 import { Bars3Icon, ChevronRightIcon, ChevronUpDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
+import {ref} from "vue";
+import playerData from "~/data/players.json"
 
 const props = defineProps({ list: {type: Array, default: []}, active: {type: String, default: ''}})
 const emit = defineEmits([ 'handleFilter'])
+const players = ref([])
+
+players.value = playerData.data.players
+
 function hasDuplicateProperty(value) {
   const results = props.list.filter(item => item.player.name.toLowerCase().trim() === value.toLowerCase().trim())
   return results.length
+}
+
+function getPlayerFullName(username){
+  const matchingPlayers  = players.value.filter(item => {
+    return item.userName === username;
+  })
+  if(matchingPlayers.length > 0) {
+    return matchingPlayers[0].realName
+  }
+  return username
+
 }
 
 </script>

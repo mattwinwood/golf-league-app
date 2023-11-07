@@ -142,10 +142,10 @@ async function getScorecard(record) {
 }
 
 const getAllScorecards = () => {
-  const alert = confirm("Are you sure you want to request " + results.value.length.toString() + " record(s)?");
-  if (alert) {
-    if(results.value.length > 100) {
-      confirm("You cannot request over 100 records at a time. Call Matt.");
+    if(results.value.length > 300) {
+      const alert = confirm("Are you sure you want to request " + results.value.length.toString() + " record(s)?");
+      if (alert) {
+        confirm("You cannot request over 100 records at a time. Call Matt.");
       return
     }
     scorecard.value = [];

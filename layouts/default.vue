@@ -133,7 +133,6 @@
 
     <!-- MAIN CONTENT AREA -->
     <div class="xl:pl-72">
-
       {{results.length }}
      <!-- HEADER -->
       <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-6 border-b border-white/5 bg-gray-900 px-4 shadow-sm sm:px-6 lg:px-8">
@@ -154,15 +153,14 @@
       <!--  RECORD LIST   -->
       <main :class="[scorecard && 'lg:pr-[0px]']">
         <header class="flex items-center justify-between border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
-          <h1 class="text-base font-semibold leading-7 text-white">{{activeCourse !== 'All' ? 'Scorecards for ' + activeCourse : 'All Scorecards'}}
-            <span class="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-sm font-medium ml-2 text-gray-200 ring-1 ring-inset ring-indigo-400/20"> {{filteredResults && filteredResults.length}} Results</span>
-                                                                  </h1>
-
+          <h1 class="text-base font-semibold leading-7 text-white">
+            {{activeCourse !== 'All' ? 'Scorecards for ' + activeCourse : 'All Scorecards'}} ({{filteredResults && filteredResults.length}})
+            <span class="flex inline-flex mx-2 border rounded border-indigo-400 p-1 px-2 text-base leading-6 text-indigo-400" @click="generateReport()">
+            Create Full Report
+          </span>
+          </h1>
           <!-- Sort dropdown -->
           <Menu as="div" class="relative flex gap-4">
-            <MenuButton class="flex text-sm font-medium leading-6 text-indigo-500" @click="generateReport()">
-              Create Full Report
-            </MenuButton>
             <MenuButton class="flex items-center gap-x-1 text-sm font-medium leading-6 text-white">
               Sort by
               <ChevronUpDownIcon class="h-5 w-5 text-gray-500" aria-hidden="true" />
@@ -191,7 +189,7 @@
           <PlayerItem :list="players" :active="players[0]"  @handleFilter="(card) => getScorecard(card)"/>
         </div>
        <div v-if="activeCourse.toLowerCase() !== 'all'">
-        <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecard(card)"/>
+        <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecardItem(card)"/>
        </div>
         <div v-else class="text-sm italic font-serif mx-auto text-slate-400 leading-4 tracking-wider items-center pt-64 w-1/2 justify-center align-middle">
           <span>"Please select a golf course to view records."</span>
@@ -249,6 +247,7 @@
     <!-- MODAL  -->
     <Modal v-model="showModal" :csvData="csvData"/>
   </div>
+
 
 </template>
 
@@ -315,6 +314,18 @@ async function getScorecard(record) {
 
   scorecard.value.push(requestScorecard);
   const data = csvHelpers.extractPlayerScores(scorecard)
+  initializeReport();
+  adjustedScorecard.value.push(data);
+}
+
+async function getScorecardItem(record) {
+  clearRequests();  // Assuming you have the clearRequests method defined elsewhere
+  setActiveRecordId(record.id)
+  let requestScorecard = await $fetch('https://api.trackmanrange.com/api/scorecards/' + record.dbId.substring(0, record.dbId.indexOf(':')))
+    .catch((error) => error.data);
+
+  scorecard.value.push(requestScorecard);
+  const data = csvHelpers.extractPlayerScores(scorecard)
   generateReportBySelected();
   adjustedScorecard.value.push(data);
 }
@@ -358,6 +369,12 @@ function adjustScorecard(holes) {
 }
 
 // HANDLER: Only creates a report for the selected record item
+function initializeReport() {
+  if(csvData.value){
+    csvData.value = ''
+  }
+  csvData.value = csvHelpers.generateCsv(scorecard);
+}
 function generateReportBySelected() {
   if(csvData.value){
     csvData.value = ''
