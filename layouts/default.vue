@@ -51,7 +51,7 @@
                     <li>
                       <ul role="list" class="-mx-2 space-y-1">
                         <li v-for="item in navigation" :key="item.name">
-                          <a :href="item.href" :class="[item.current ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                          <a @click="item.current = item.name; router.push(item.href)" :class="[router.currentRoute.value.href === item.href ? 'bg-green-400 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                             <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                             {{ item.name }}
                           </a>
@@ -62,7 +62,7 @@
                       <ul role="list" class="-mx-2 space-y-1">
                         <div class="text-xs font-semibold leading-6 text-gray-400">Courses</div>
                         <li v-for="item in courses" :key="item.name">
-                          <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                          <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-green-400 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                             <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                             {{ item.name }}
                           </div>
@@ -97,18 +97,18 @@
             <li>
               <ul role="list" class="-mx-2 space-y-1">
                 <li v-for="item in navigation" :key="item.name">
-                  <a :href="item.href" :class="[item.current ? 'bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                  <a @click="item.current = item.name; router.push(item.href)" :class="[router.currentRoute.value.href === item.href ? 'bg-green-400 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                     <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                     {{ item.name }}
                   </a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li v-if="router.currentRoute.value.name === 'index'">
               <ul role="list" class="-mx-2 space-y-1">
                 <div class="text-xs font-semibold leading-6 text-gray-400">Courses</div>
                 <li v-for="item in courses" :key="item.name">
-                  <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-gray-800 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                  <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-indigo-500 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                     <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                     {{ item.name }}
                   </div>
@@ -129,11 +129,8 @@
       </div>
     </div>
 
-
-
     <!-- MAIN CONTENT AREA -->
     <div class="xl:pl-72">
-      {{results.length }}
      <!-- HEADER -->
       <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-6 border-b border-white/5 bg-gray-900 px-4 shadow-sm sm:px-6 lg:px-8">
         <button type="button" class="-m-2.5 p-2.5 text-white xl:hidden" @click="sidebarOpen = true">
@@ -152,16 +149,26 @@
 
       <!--  RECORD LIST   -->
       <main :class="[scorecard && 'lg:pr-[0px]']">
-        <header class="flex items-center justify-between border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
-          <h1 class="text-base font-semibold leading-7 text-white">
-            {{activeCourse !== 'All' ? 'Scorecards for ' + activeCourse : 'All Scorecards'}} ({{filteredResults && filteredResults.length}})
-            <span class="flex inline-flex mx-2 border rounded border-indigo-400 p-1 px-2 text-base leading-6 text-indigo-400" @click="generateReport()">
+        <header class="flex items-start justify-start border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8 flex-row">
+          <div class="flex-col">
+          <h1 class="text-xl flex content-end items-end font-semibold leading-7 text-indigo-400">
+            <span class="flex inline-flex  gap-2 font-light text-3xl"><span class="self-end">{{activeCourse !== 'All' ? '' + activeCourse : 'All Scorecards'}}</span> </span>
+            <span class="text-sm mb-1 text-white ml-2">({{filteredResults && filteredResults.length}} results)</span>
+          </h1>
+          <div v-if="activeCourse.toLowerCase() !== 'all'" class="font-regular flex text-sm text-base gap-3 flex text-white">
+            <span><span class="font-semibold text-green-400">{{numberOfPlayersWithScorecards}}</span> of <span class="text-blue-400 font-semibold">{{totalNumberOfPlayers}} League Players</span> have completed this course while <span class="font-semibold text-orange-400">{{numberOfPlayersMissingScorecards}}</span> players remain.</span>
+          </div>
+
+          </div>
+          <!-- Sort dropdown -->
+
+          <Menu as="div" class="self-center justify-end align-middle flex flex-grow relative flex gap-4">
+                        <span class="flex items-center gap-2 inline-flex mx-2 border rounded bg-blue-600 border-indigo-900 p-1 px-4 cursor-pointer text-base leading-6 text-white" @click="generateReport()">
+              <svg class="w-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 19H8q-.825 0-1.413-.588T6 17V3q0-.825.588-1.413T8 1h7l6 6v10q0 .825-.588 1.413T19 19ZM14 8V3H8v14h11V8h-5ZM4 23q-.825 0-1.413-.588T2 21V7h2v14h11v2H4ZM8 3v5v-5v14V3Z"/></svg>
             Create Full Report
           </span>
-          </h1>
-          <!-- Sort dropdown -->
-          <Menu as="div" class="relative flex gap-4">
-            <MenuButton class="flex items-center gap-x-1 text-sm font-medium leading-6 text-white">
+
+            <MenuButton class="flex items-center gap-x-1 text-base font-medium leading-6 text-white">
               Sort by
               <ChevronUpDownIcon class="h-5 w-5 text-gray-500" aria-hidden="true" />
             </MenuButton>
@@ -184,15 +191,19 @@
           </Menu>
         </header>
 
-
-        <div class="text-white"  v-if="router.currentRoute.value.name === 'players'">
-          <PlayerItem :list="players" :active="players[0]"  @handleFilter="(card) => getScorecard(card)"/>
+        <div class="text-3xl text-white justify-center align-middle w-full h-full" v-if="isLoading">
+          Loading...
         </div>
-       <div v-if="activeCourse.toLowerCase() !== 'all'">
+        <div v-else>
+        <div class="text-white" v-if="router.currentRoute.value.name === 'players'">
+          <PlayerItem :list="players"  @handleFilter="(card) => getScorecard(card)"/>
+        </div>
+       <div v-if="router.currentRoute.value.name === 'index' && activeCourse.toLowerCase() !== 'll' && !isLoading">
         <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecardItem(card)"/>
        </div>
         <div v-else class="text-sm italic font-serif mx-auto text-slate-400 leading-4 tracking-wider items-center pt-64 w-1/2 justify-center align-middle">
           <span>"Please select a golf course to view records."</span>
+        </div>
         </div>
       </main>
 
@@ -273,7 +284,9 @@ const sidebarOpen = ref(false)
 const showModal = ref(false)
 const filteredResults = ref([])
 const filterValue = ref('')
-
+const isLoading = ref(false)
+const playersWithScorecards=ref([])
+const playersMissingScorecards=ref([])
 // API DATA
 const scorecards = ref([])
 const scorecard = ref([])
@@ -292,6 +305,15 @@ const navigation = [
   { name: 'Players', href: '/players', icon: FolderIcon, current: false }
 ]
 
+const numberOfPlayersWithScorecards = computed(() => {
+  return playersWithScorecards.value.length;
+});
+const numberOfPlayersMissingScorecards = computed(() => {
+  return playersMissingScorecards.value.length;
+});
+const totalNumberOfPlayers = computed(() => {
+  return players.value.length;
+});
 
 // INITIALIZE DATA
 results.value = data.node.scorecards.items
@@ -307,8 +329,9 @@ async function getScorecardsByCourse(record) {
 }
 // REQUEST
 async function getScorecard(record) {
+  isLoading.value = true
   clearRequests();  // Assuming you have the clearRequests method defined elsewhere
-  setActiveRecordId(record.id)
+  setActiveRecordId(record.dbId)
   let requestScorecard = await $fetch('https://api.trackmanrange.com/api/scorecards/' + record.dbId.substring(0, record.dbId.indexOf(':')))
     .catch((error) => error.data);
 
@@ -316,11 +339,13 @@ async function getScorecard(record) {
   const data = csvHelpers.extractPlayerScores(scorecard)
   initializeReport();
   adjustedScorecard.value.push(data);
+  isLoading.value = false;
+
 }
 
 async function getScorecardItem(record) {
   clearRequests();  // Assuming you have the clearRequests method defined elsewhere
-  setActiveRecordId(record.id)
+  setActiveRecordId(record.dbId)
   let requestScorecard = await $fetch('https://api.trackmanrange.com/api/scorecards/' + record.dbId.substring(0, record.dbId.indexOf(':')))
     .catch((error) => error.data);
 
@@ -332,19 +357,14 @@ async function getScorecardItem(record) {
 
 // REQUEST
 const getAllScorecards = () => {
-  const alert = confirm("Are you sure you want to request " + results.value.length.toString() + " record(s)?");
-  if (alert) {
-    if(results.value.length > 200) {
-      confirm("You cannot request over 200 records at a time. Call Matt.");
-      return
-    }
     scorecard.value = [];
-    results.value.forEach((record) => {  // Assuming you have results.value available
-      getScorecard(record);
-    });
+    // results.value.forEach((record) => {  // Assuming you have results.value available
+    //   getScorecard(record);
+    // });
     filteredResults.value = results.value;
+    matchPlayersWithScorecards(filteredResults.value)
     filterValue.value = '';
-  }
+    isLoading.value = false;
 };
 
 // REQUEST: Used to reset the workflow back to step 1 (course selection)
@@ -368,6 +388,19 @@ function adjustScorecard(holes) {
 
 }
 
+function matchPlayersWithScorecards(filteredResults) {
+  const playerNamesWithScorecards = new Set(filteredResults.map((scorecard) =>
+                                                                  scorecard.player.name.toUpperCase()
+  ));
+
+  playersWithScorecards.value = players.value.filter((player) =>
+                                                     playerNamesWithScorecards.has(player.userName.toUpperCase())
+  );
+
+  playersMissingScorecards.value = players.value.filter((player) =>
+                                                        !playerNamesWithScorecards.has(player.userName.toUpperCase())
+  );
+}
 // HANDLER: Only creates a report for the selected record item
 function initializeReport() {
   if(csvData.value){
@@ -387,20 +420,34 @@ function generateReport() {
   if(csvData.value){
     csvData.value = ''
   }
-  results.value.forEach((record) =>
-    {
-      getScorecardsByCourse(record).then((resp) => {
-        const response = JSON.parse(JSON.stringify(resp))
-        scorecardsByCourse.value.push(response);
-      }).finally(() => {
-           csvData.value = csvHelpers.generateCsv(scorecardsByCourse);
-         })
-    })
-  showModal.value = true;
+
+  const alert = confirm("Are you sure you want to request " + results.value.length.toString() + " record(s)?");
+  if (alert) {
+    if (results.value.length > 150) {
+      confirm("You cannot request over 200 records at a time. Call Matt.");
+      return
+    } else {
+      results.value.forEach((record) =>
+                            {
+                              getScorecard(record);
+
+                              getScorecardsByCourse(record).then((resp) => {
+                                const response = JSON.parse(JSON.stringify(resp))
+                                scorecardsByCourse.value.push(response);
+                              }).finally(() => {
+                                csvData.value = csvHelpers.generateCsv(scorecardsByCourse);
+                                showModal.value = true;
+                              })
+                            })
+    }
+  }
+
+
 }
 
 // DISPLAY LOGIC
 const filterByCourse = (courseName) => {
+  isLoading.value = true;
   if (courseName === "All") {
     results.value = scorecards.value
     activeCourse.value = 'All'
@@ -413,8 +460,8 @@ const filterByCourse = (courseName) => {
   getAllScorecards()
 }
 
-const setActiveRecordId = (id) => {
-  activeRecord.value = id
+const setActiveRecordId = (dbId) => {
+  activeRecord.value = dbId
 }
 // DISPLAY LOGIC: Filters the data based on the input field value
 watch(
@@ -432,12 +479,14 @@ watch(
 );
 // DISPLAY LOGIC:
 function handleSort(value) {
+  isLoading.value = true
   const sortedMyListings = JSON.parse(JSON.stringify(filteredResults.value));
   const sortable = [];
   for (const item in sortedMyListings) {
     sortable.push(sortedMyListings[item]);
   }
   filteredResults.value= sortByType(sortable, value)
+  isLoading.value = false
 }
 
 
@@ -479,6 +528,10 @@ function sortByType(sortable, value){
     });
   }
   return sortable
+}
+function updateNav(item) {
+
+  console.log("updateNav item", item);
 }
 
 </script>

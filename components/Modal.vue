@@ -108,7 +108,7 @@ const copyText = () => {
   //Creating textarea element
   let textarea = document.createElement("textarea")
 //Settings its value to the thing you want to copy
-  textarea.value = csvContent.value.outerHTML
+  textarea.value = csvContent.value.innerHTML
 //Appending the textarea to body
   document.body.appendChild(textarea)
 //Selecting its content

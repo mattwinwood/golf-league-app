@@ -14,7 +14,7 @@
             </tr>
             </thead>
             <tbody class="">
-            <tr v-for="(player, i) in props.list" :key="player.email" class="even:bg-gray-800">
+            <tr v-for="(player, i) in props.list" :key="player.userName" class="even:bg-gray-800">
               <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-3">{{ player.realName}}</td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.userName}}</td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.flight}}</td>
@@ -32,7 +32,7 @@
 <script setup>
 import { Bars3Icon, ChevronRightIcon, ChevronUpDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 
-const props = defineProps({ list: {type: Array, default: []}, active: {type: String, default: ''}})
+const props = defineProps({ list: {type: Array, default: []}})
 const emit = defineEmits([ 'handleFilter'])
 
 

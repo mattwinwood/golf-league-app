@@ -1,3 +1,5 @@
+import playerData from "~/data/players.json"
+
 export default {
   extractCourseDetails(scorecard) {
     for (const response of scorecard.value) {
@@ -49,7 +51,6 @@ export default {
     csvContent += `Par, ${pars.join(", ")}\n`;
 
     strokeIndexes.length = 9
-    console.log("", strokeIndexes);
     csvContent += `Handicap, ${strokeIndexes.join(", ")}\n`;
 
     return {csvContent, teesMap};
@@ -84,15 +85,22 @@ export default {
 
         // Check if all 9 holes have scores
         if (holeScores.length === 9) {
-          const playerName = record.players[0].name;
+          const userName = record.players[0].name;
+          const players = playerData.data.players
+          const playerDetails = players.find((player) => {
+            return player.userName.trim().toLowerCase() === userName.trim().toLowerCase()
+          })
           const totalScore = holeScores.reduce((acc, score) => acc + score, 0);
 
-          if (!playersMap.has(playerName) || (playersMap.get(playerName)?.date || new Date(0)) < record.date) {
+          if (!playersMap.has(userName) || (playersMap.get(userName)?.date || new Date(0)) < record.date) {
             if(record.state === "Completed") {
-              playersMap.set(playerName, {
+              playersMap.set(userName, {
                 date      : new Date(record.lastHoleFinishedAt),
                 holeScores: holeScores,
-                totalScore: totalScore
+                totalScore: totalScore,
+                flight: playerDetails ? playerDetails.flight : '',
+                handicap: playerDetails ? playerDetails.handicap : '',
+                realName: playerDetails ? playerDetails.realName : userName,
               });
             }
           }
@@ -104,9 +112,9 @@ export default {
   getCsvContent(playersMap){
 
     let csvContent = ''
-    csvContent += "Hole, 1, 2, 3, 4, 5, 6, 7, 8, 9, Total Score\n";
+    csvContent += "Hole, 1, 2, 3, 4, 5, 6, 7, 8, 9, TOTAL, HCP, NET, POINTS, FLIGHT\n";
     for (const [playerName, data] of playersMap.entries()) {
-      csvContent += `${playerName}, ${data.holeScores.join(", ")}, ${data.totalScore}\n`;
+      csvContent += `${data.realName}, ${data.holeScores.join(", ")},${data.totalScore},${data.handicap},${data.totalScore - data.handicap},,${data.flight}\n`;
     }
     return csvContent;
   },
