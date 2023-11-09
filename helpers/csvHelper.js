@@ -1,9 +1,13 @@
+import courseData from "~/data/courses.json";
 import playerData from "~/data/players.json"
 
 export default {
   extractCourseDetails(scorecard) {
     for (const response of scorecard.value) {
-      let csvContent = `Course Name: ${response.course.name} (Front 9)\n`;
+      const course = courseData.data.courses.find((course) => course.name === response.course.name)
+      console.log("course", course);
+
+      let csvContent = `Course: ${course.name} - Week ${course.week} (Front 9)\n`;
       return csvContent;
     }
 
@@ -43,12 +47,12 @@ export default {
     let csvContent = ''
     // Append Distance Data
     for (const [gender, data] of teesMap.entries()) {
-      csvContent += `${gender}, ${data.distances.join(", ")}\n`;
+      csvContent += `${gender}, ${data.distances.join(", ")},${data.distances.reduce((partialSum, a) => partialSum + a, 0)}\n`;
     }
 
     // Append Par Data
     pars.length = 9
-    csvContent += `Par, ${pars.join(", ")}\n`;
+    csvContent += `Par, ${pars.join(", ")},${pars.reduce((partialSum, a) => partialSum + a, 0)}\n`;
 
     strokeIndexes.length = 9
     csvContent += `Handicap, ${strokeIndexes.join(", ")}\n`;

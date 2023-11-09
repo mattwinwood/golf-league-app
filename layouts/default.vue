@@ -190,6 +190,8 @@
             </transition>
           </Menu>
         </header>
+        <p @click="submitData()" class="text-3xl text-white">submitIt()
+        </p>
 
         <div class="text-3xl text-white justify-center align-middle w-full h-full" v-if="isLoading">
           Loading...
@@ -201,6 +203,10 @@
        <div v-if="router.currentRoute.value.name === 'index' && activeCourse.toLowerCase() !== 'll' && !isLoading">
         <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecardItem(card)"/>
        </div>
+          <div v-if="router.currentRoute.value.name === 'upload'">
+            <textarea v-model="updatedJsonData" placeholder="Paste your JSON array here" class="w-2/3 flex flex-grow h-screen"/>
+            <button @click="submitData">Submit</button>
+          </div>
         <div v-else class="text-sm italic font-serif mx-auto text-slate-400 leading-4 tracking-wider items-center pt-64 w-1/2 justify-center align-middle">
           <span>"Please select a golf course to view records."</span>
         </div>
@@ -265,6 +271,9 @@
 <script setup>
 import { ref } from 'vue'
 const router = useRouter();
+import * as path from 'node:path'
+import * as fs from 'fs'
+
 import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems, TransitionChild, TransitionRoot, } from '@headlessui/vue'
 import { ChartBarSquareIcon, Cog6ToothIcon, FolderIcon, GlobeAltIcon, ServerIcon, SignalIcon, XMarkIcon, } from '@heroicons/vue/24/outline'
 import { Bars3Icon, ChevronRightIcon, ChevronUpDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
@@ -279,6 +288,8 @@ import playerData from '/data/players.json'
 
 
 // DISPLAY LOGIC
+const jsonData = ref('')
+const updatedJsonData = ref('')
 const footerActive = ref(false)
 const sidebarOpen = ref(false)
 const showModal = ref(false)
@@ -316,6 +327,7 @@ const totalNumberOfPlayers = computed(() => {
 });
 
 // INITIALIZE DATA
+jsonData.value = JSON.stringify(data.node.scorecards)
 results.value = data.node.scorecards.items
 scorecards.value = data.node.scorecards.items
 filteredResults.value = data.node.scorecards.items
@@ -529,9 +541,13 @@ function sortByType(sortable, value){
   }
   return sortable
 }
-function updateNav(item) {
-
-  console.log("updateNav item", item);
+async function submitData() {
+  console.log("submitted");
+  const updated = updatedJsonData.value
+  const { body } = await $fetch('/api/update', {
+    method: 'post',
+    body: { updated}
+  })
+  console.log("body",body);
 }
-
 </script>

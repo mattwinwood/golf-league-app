@@ -1,44 +1,9 @@
-Rob Vasko, 4, 9, 3, 5, 5, 6, 4, 5, 5,46,11,35,TODO,C
-ADAM, 4, 6, 4, 4, 6, 4, 4, 5, 7,44,,44,TODO,
-KevinJames, 4, 5, 3, 6, 4, 4, 5, 5, 7,43,,43,TODO,
-Dylan Pici, 4, 6, 3, 6, 4, 4, 4, 4, 4,39,6,33,TODO,B
-Glenn Grasha, 3, 6, 3, 5, 5, 4, 4, 5, 5,40,8,32,TODO,B
-Dan Birdseye, 5, 8, 3, 6, 5, 4, 5, 5, 5,46,13,33,TODO,C
-Kyle Geller, 5, 6, 5, 6, 5, 5, 5, 5, 6,48,10,38,TODO,C
-Steve Myers, 3, 4, 4, 4, 5, 5, 5, 4, 5,39,5,34,TODO,A
-Steve Gatti, 4, 5, 3, 4, 5, 3, 6, 4, 5,39,7,32,TODO,B
-Steve Korb, 5, 5, 3, 6, 6, 3, 4, 4, 5,41,5,36,TODO,A
-Andy Caudill, 4, 5, 3, 4, 4, 4, 4, 4, 5,37,3,34,TODO,A
-WIZ JR, 5, 6, 3, 4, 4, 3, 4, 3, 5,37,,37,TODO,
-TIM, 6, 6, 3, 5, 6, 3, 7, 6, 9,51,,51,TODO,
-HEATH, 4, 6, 4, 5, 6, 4, 5, 5, 6,45,,45,TODO,
-WIZ, 4, 6, 5, 6, 5, 4, 5, 4, 7,46,,46,TODO,
-ROBERT, 6, 7, 3, 5, 5, 3, 5, 6, 4,44,,44,TODO,
-Steve Busche, 5, 4, 3, 5, 5, 5, 5, 4, 7,43,11,32,TODO,C
-Ted Busche, 6, 7, 3, 5, 8, 4, 7, 6, 7,53,19,34,TODO,D
-Todd Dirling, 4, 5, 4, 6, 5, 3, 5, 5, 5,42,5,37,TODO,A
-Justin Dickert, 4, 5, 3, 4, 7, 4, 3, 6, 7,43,8,35,TODO,B
-Ryan Peters, 7, 5, 5, 6, 5, 6, 4, 5, 5,48,12,36,TODO,C
-Tim Gallagher, 4, 5, 3, 4, 3, 5, 4, 4, 8,40,6,34,TODO,A
-Jeff Catanzarite, 4, 5, 5, 5, 6, 4, 5, 4, 6,44,6,38,TODO,A
-Fore on the green, 5, 6, 3, 5, 5, 3, 6, 4, 6,43,,43,TODO,
-Ashley Edmondson, 8, 9, 5, 8, 8, 6, 7, 7, 9,67,25,42,TODO,D
-Chasing Bogeys, 3, 3, 3, 4, 5, 3, 6, 5, 5,37,,37,TODO,
-Jared Patton, 4, 4, 3, 5, 4, 4, 4, 3, 4,35,2,33,TODO,A
-Marc Swankler, 5, 6, 3, 6, 6, 2, 5, 4, 6,43,10,33,TODO,C
-Dylan Manning, 5, 5, 2, 5, 4, 3, 4, 6, 4,38,6,32,TODO,A
-Chad Barnett, 6, 5, 3, 4, 4, 3, 7, 4, 7,43,4,39,TODO,A
-Joe Bourdage, 4, 6, 3, 6, 4, 4, 4, 3, 6,40,4,36,TODO,A
-Mike Float, 6, 5, 4, 4, 7, 3, 5, 7, 6,47,12,35,TODO,C
-Steve Skowronek, 4, 5, 3, 4, 4, 3, 3, 4, 4,34,6,28,TODO,A
-Corey Amaya, 4, 6, 3, 5, 4, 4, 4, 3, 8,41,7,34,TODO,B
-Matt Winwood, 4, 4, 3, 5, 4, 3, 5, 4, 5,37,8,29,TODO,B
-Kevin Winwood, 5, 5, 3, 5, 3, 3, 4, 3, 5,36,5,31,TODO,A
-Jake Bobak, 4, 4, 3, 5, 6, 4, 4, 4, 4,38,8,30,TODO,B
-Jon Wik, 4, 5, 4, 5, 4, 4, 4, 5, 6,41,9,32,TODO,B
-Jeremy S. Bucklew, 5, 8, 5, 6, 4, 3, 5, 8, 5,49,,49,TODO,
-Zach Davison, 5, 6, 3, 5, 6, 4, 7, 5, 5,46,9,37,TODO,B
-TODD, 4, 6, 3, 6, 4, 3, 5, 5, 6,42,,42,TODO,
-RYAN, 5, 7, 4, 6, 6, 6, 6, 6, 7,53,,53,TODO,
-MATT, 4, 5, 3, 4, 4, 3, 4, 4, 6,37,,37,TODO,
-KAREN, 5, 7, 4, 6, 7, 4, 5, 5, 7,50,,50,TODO,
+Course Name: Kissing Tree (Front 9)
+Male, 300, 358, 156, 379, 490, 114, 315, 433, 240,2785
+Par, 4, 4, 3, 4, 5, 3, 4, 5, 4,36
+Handicap, 15, 3, 7, 1, 5, 17, 9, 11, 13
+Hole, 1, 2, 3, 4, 5, 6, 7, 8, 9, TOTAL, HCP, NET, POINTS, FLIGHT
+TODD, 4, 6, 4, 5, 5, 3, 4, 6, 4,41,,41,,
+RYAN, 5, 5, 5, 6, 6, 4, 5, 9, 3,48,,48,,
+Kevin Winwood, 4, 4, 5, 4, 5, 2, 4, 5, 3,36,5,31,,A
+Matt Winwood, 4, 5, 2, 5, 6, 3, 4, 4, 4,37,8,29,,B
