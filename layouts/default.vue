@@ -151,7 +151,10 @@
       <main :class="[scorecard && 'lg:pr-[0px]']">
         <header class="flex items-start justify-start border-b border-white/5 px-4 py-4 sm:px-6 sm:py-6 lg:px-8 flex-row">
           <div class="flex-col">
-          <h1 class="text-xl flex content-end items-end font-semibold leading-7 text-indigo-400">
+            <h1 v-if="router.currentRoute.value.name === 'players'" class="text-xl flex content-end items-end font-semibold leading-7 text-indigo-400">
+              <span class="flex inline-flex  gap-2 font-light text-3xl"><span class="self-end">All Players</span> </span>
+            </h1>
+            <h1 v-else class="text-xl flex content-end items-end font-semibold leading-7 text-indigo-400">
             <span class="flex inline-flex  gap-2 font-light text-3xl"><span class="self-end">{{activeCourse !== 'All' ? '' + activeCourse : 'All Scorecards'}}</span> </span>
             <span class="text-sm mb-1 text-white ml-2">({{filteredResults && filteredResults.length}} results)</span>
           </h1>
@@ -190,8 +193,6 @@
             </transition>
           </Menu>
         </header>
-        <p @click="submitData()" class="text-3xl text-white">submitIt()
-        </p>
 
         <div class="text-3xl text-white justify-center align-middle w-full h-full" v-if="isLoading">
           Loading...
@@ -204,6 +205,8 @@
         <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecardItem(card)"/>
        </div>
           <div v-if="router.currentRoute.value.name === 'upload'">
+            <p @click="submitData()" class="text-3xl text-white">submitIt()
+            </p>
             <textarea v-model="updatedJsonData" placeholder="Paste your JSON array here" class="w-2/3 flex flex-grow h-screen"/>
             <button @click="submitData">Submit</button>
           </div>

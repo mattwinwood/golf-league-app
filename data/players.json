@@ -7,6 +7,7 @@
         "realName": "Andy Caudill",
         "flight": "A",
         "handicap": 3,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -14,6 +15,7 @@
         "realName": "Joe Bourdage",
         "flight": "A",
         "handicap": 4,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -21,6 +23,7 @@
         "realName": "Steve Myers",
         "flight": "A",
         "handicap": 5,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -28,6 +31,7 @@
         "realName": "Jared Patton",
         "flight": "A",
         "handicap": 2,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -35,6 +39,7 @@
         "realName": "Tim Gallagher",
         "flight": "A",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -42,6 +47,7 @@
         "realName": "Steve Skowronek",
         "flight": "A",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -49,6 +55,7 @@
         "realName": "Kevin Winwood",
         "flight": "A",
         "handicap": 5,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -56,6 +63,7 @@
         "realName": "Jeff Catanzarite",
         "flight": "A",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -63,6 +71,7 @@
         "realName": "Steve Korb",
         "flight": "A",
         "handicap": 5,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -70,6 +79,7 @@
         "realName": "Vic Falk",
         "flight": "A",
         "handicap": 3,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -77,6 +87,7 @@
         "realName": "Chad Barnett",
         "flight": "A",
         "handicap": 4,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -84,6 +95,7 @@
         "realName": "Todd Dirling",
         "flight": "A",
         "handicap": 5,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -91,6 +103,7 @@
         "realName": "Dylan Manning",
         "flight": "A",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -98,6 +111,7 @@
         "realName": "Josiah Nowak",
         "flight": "A",
         "handicap": 2,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -105,6 +119,7 @@
         "realName": "Ed Waibel",
         "flight": "A",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -112,6 +127,7 @@
         "realName": "Matt Irwin",
         "flight": "A",
         "handicap": 3,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -119,6 +135,7 @@
         "realName": "Tim Booher",
         "flight": "A",
         "handicap": 5,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -126,6 +143,7 @@
         "realName": "Ryan Neel",
         "flight": "A",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -133,6 +151,7 @@
         "realName": "Brett Greenier",
         "flight": "A",
         "handicap": 5,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -140,6 +159,7 @@
         "realName": "James Carney",
         "flight": "A",
         "handicap": 2,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -147,6 +167,7 @@
         "realName": "Justin Dickert",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -154,6 +175,7 @@
         "realName": "Dylan Pici",
         "flight": "B",
         "handicap": 6,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -161,6 +183,7 @@
         "realName": "Glenn Grasha",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -168,6 +191,7 @@
         "realName": "Dominic Ammon",
         "flight": "B",
         "handicap": 7,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -175,6 +199,7 @@
         "realName": "Corey Amaya",
         "flight": "B",
         "handicap": 7,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -182,6 +207,7 @@
         "realName": "Eric Hampton",
         "flight": "B",
         "handicap": 7,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -189,6 +215,7 @@
         "realName": "Glenn Reed",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -196,6 +223,7 @@
         "realName": "Ty Webb",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -203,6 +231,7 @@
         "realName": "Paul Bugajski",
         "flight": "B",
         "handicap": 8,
+        "skins": "FALSE",
         "notes": ""
       },
       {
@@ -210,6 +239,7 @@
         "realName": "Taylor Hoffman",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -217,6 +247,7 @@
         "realName": "Steve Gatti",
         "flight": "B",
         "handicap": 7,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -224,6 +255,7 @@
         "realName": "Kaylee Falk",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -231,6 +263,7 @@
         "realName": "Garrett Staff",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -238,6 +271,7 @@
         "realName": "Dan Pelczar",
         "flight": "B",
         "handicap": 9,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -245,6 +279,7 @@
         "realName": "Joe Fordyce",
         "flight": "B",
         "handicap": 7,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -252,6 +287,7 @@
         "realName": "Jon Wik",
         "flight": "B",
         "handicap": 9,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -259,6 +295,7 @@
         "realName": "Jake Bobak",
         "flight": "B",
         "handicap": 8,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -266,6 +303,7 @@
         "realName": "Zach Davison",
         "flight": "B",
         "handicap": 9,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -273,13 +311,15 @@
         "realName": "Matt Winwood",
         "flight": "B",
         "handicap": 8,
-        "notes": "Totally rad guy. Also, handsome."
+        "skins": "TRUE",
+        "notes": ""
       },
       {
         "userName": "HOLDERBAUM",
         "realName": "Rob Holderbaum",
         "flight": "C",
         "handicap": 10,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -287,6 +327,7 @@
         "realName": "Marc Swankler",
         "flight": "C",
         "handicap": 10,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -294,6 +335,7 @@
         "realName": "Ryan Peters",
         "flight": "C",
         "handicap": 12,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -301,6 +343,7 @@
         "realName": "Shauna Caudill",
         "flight": "C",
         "handicap": 13,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -308,6 +351,7 @@
         "realName": "Jason Pechunka",
         "flight": "C",
         "handicap": 13,
+        "skins": "",
         "notes": ""
       },
       {
@@ -315,6 +359,7 @@
         "realName": "Rob Vasko",
         "flight": "C",
         "handicap": 11,
+        "skins": "",
         "notes": ""
       },
       {
@@ -322,6 +367,7 @@
         "realName": "Kyle Geller",
         "flight": "C",
         "handicap": 10,
+        "skins": "",
         "notes": ""
       },
       {
@@ -329,6 +375,7 @@
         "realName": "Steve Busche",
         "flight": "C",
         "handicap": 11,
+        "skins": "",
         "notes": ""
       },
       {
@@ -336,6 +383,7 @@
         "realName": "Mike Float",
         "flight": "C",
         "handicap": 12,
+        "skins": "",
         "notes": ""
       },
       {
@@ -343,6 +391,7 @@
         "realName": "Bill Lipsky",
         "flight": "C",
         "handicap": 13,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -350,6 +399,7 @@
         "realName": "Jeff Stewart",
         "flight": "C",
         "handicap": 13,
+        "skins": "",
         "notes": ""
       },
       {
@@ -357,6 +407,7 @@
         "realName": "Joel DeFelice",
         "flight": "C",
         "handicap": 10,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -364,6 +415,7 @@
         "realName": "Jake DeFelice",
         "flight": "C",
         "handicap": 13,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -371,6 +423,7 @@
         "realName": "Dan Holder",
         "flight": "C",
         "handicap": 15,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -378,6 +431,7 @@
         "realName": "Mark Borger",
         "flight": "C",
         "handicap": 10,
+        "skins": "",
         "notes": ""
       },
       {
@@ -385,6 +439,7 @@
         "realName": "Mike Steffenino",
         "flight": "C",
         "handicap": 11,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -392,6 +447,7 @@
         "realName": "Shaun Kovac",
         "flight": "C",
         "handicap": 10,
+        "skins": "",
         "notes": ""
       },
       {
@@ -399,6 +455,7 @@
         "realName": "Dan Birdseye",
         "flight": "C",
         "handicap": 13,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -406,6 +463,7 @@
         "realName": "Sean Darby",
         "flight": "C",
         "handicap": 14,
+        "skins": "",
         "notes": ""
       },
       {
@@ -413,6 +471,7 @@
         "realName": "Grant Darby",
         "flight": "D",
         "handicap": 26,
+        "skins": "",
         "notes": ""
       },
       {
@@ -420,6 +479,7 @@
         "realName": "Justin Caras",
         "flight": "D",
         "handicap": 20,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -427,6 +487,7 @@
         "realName": "Karen Irwin",
         "flight": "D",
         "handicap": 15,
+        "skins": "",
         "notes": ""
       },
       {
@@ -434,6 +495,7 @@
         "realName": "Ted Busche",
         "flight": "D",
         "handicap": 19,
+        "skins": "",
         "notes": ""
       },
       {
@@ -441,6 +503,7 @@
         "realName": "LeeAnn Zeise",
         "flight": "D",
         "handicap": 23,
+        "skins": "",
         "notes": ""
       },
       {
@@ -448,6 +511,7 @@
         "realName": "Jeremy S. Bucklew",
         "flight": "D",
         "handicap": 15,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -455,6 +519,7 @@
         "realName": "Sean Tate",
         "flight": "D",
         "handicap": 29,
+        "skins": "",
         "notes": ""
       },
       {
@@ -462,6 +527,7 @@
         "realName": "Joe DeFelice",
         "flight": "D",
         "handicap": 16,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -469,6 +535,7 @@
         "realName": "Heather Lowe",
         "flight": "D",
         "handicap": 17,
+        "skins": "",
         "notes": ""
       },
       {
@@ -476,6 +543,7 @@
         "realName": "Dylan Arrabito",
         "flight": "D",
         "handicap": 21,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -483,6 +551,7 @@
         "realName": "Anna Wingard",
         "flight": "D",
         "handicap": 20,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -490,6 +559,7 @@
         "realName": "Ashley Edmondson",
         "flight": "D",
         "handicap": 25,
+        "skins": "",
         "notes": ""
       },
       {
@@ -497,6 +567,7 @@
         "realName": "Cody Stark",
         "flight": "D",
         "handicap": 25,
+        "skins": "",
         "notes": ""
       },
       {
@@ -504,6 +575,7 @@
         "realName": "Brandon Ferrari",
         "flight": "D",
         "handicap": 24,
+        "skins": "TRUE",
         "notes": ""
       },
       {
@@ -511,6 +583,7 @@
         "realName": "Darlene Skupien",
         "flight": "D",
         "handicap": 22,
+        "skins": "",
         "notes": ""
       },
       {
@@ -518,6 +591,7 @@
         "realName": "Meg Catanzarite",
         "flight": "D",
         "handicap": 19,
+        "skins": "TRUE",
         "notes": ""
       }
     ]

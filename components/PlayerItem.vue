@@ -6,6 +6,7 @@
           <table class="min-w-full divide-y divide-gray-700">
             <thead>
             <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-3">Skins</th>
               <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-3">Name</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">User Name</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">Flight</th>
@@ -15,6 +16,7 @@
             </thead>
             <tbody class="">
             <tr v-for="(player, i) in props.list" :key="player.userName" class="even:bg-gray-800">
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.skins ? "Paid" : ""}}</td>
               <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-3">{{ player.realName}}</td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.userName}}</td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.flight}}</td>
