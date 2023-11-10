@@ -51,7 +51,7 @@
                     <li>
                       <ul role="list" class="-mx-2 space-y-1">
                         <li v-for="item in navigation" :key="item.name">
-                          <a @click="item.current = item.name; router.push(item.href)" :class="[router.currentRoute.value.href === item.href ? 'bg-green-400 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                          <a @click="item.current = item.name; router.push(item.href)" :class="[router.currentRoute.value.href === item.href ? 'bg-green-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                             <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                             {{ item.name }}
                           </a>
@@ -62,7 +62,7 @@
                       <ul role="list" class="-mx-2 space-y-1">
                         <div class="text-xs font-semibold leading-6 text-gray-400">Courses</div>
                         <li v-for="item in courses" :key="item.name">
-                          <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-green-400 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                          <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-green-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                             <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                             {{ item.name }}
                           </div>
@@ -97,7 +97,7 @@
             <li>
               <ul role="list" class="-mx-2 space-y-1">
                 <li v-for="item in navigation" :key="item.name">
-                  <a @click="item.current = item.name; router.push(item.href)" :class="[router.currentRoute.value.href === item.href ? 'bg-green-400 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                  <a @click="item.current = item.name; router.push(item.href)" :class="[router.currentRoute.value.href === item.href ? 'bg-green-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                     <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                     {{ item.name }}
                   </a>
@@ -108,7 +108,7 @@
               <ul role="list" class="-mx-2 space-y-1">
                 <div class="text-xs font-semibold leading-6 text-gray-400">Courses</div>
                 <li v-for="item in courses" :key="item.name">
-                  <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'cursor-pointer bg-indigo-500 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                  <div @click="filterByCourse(item.name)" :class="[item.name === activeCourse ? 'bg-indigo-700 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800', 'cursor-pointer group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                     <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
                     {{ item.name }}
                   </div>
@@ -154,11 +154,12 @@
             <h1 v-if="router.currentRoute.value.name === 'players'" class="text-xl flex content-end items-end font-semibold leading-7 text-indigo-400">
               <span class="flex inline-flex  gap-2 font-light text-3xl"><span class="self-end">All Players</span> </span>
             </h1>
-            <h1 v-else class="text-xl flex content-end items-end font-semibold leading-7 text-indigo-400">
+            <h1 v-else class="text-2xl flex content-end items-end font-semibold leading-7 text-white">
+              <svg class="inline-flex mr-1 w-7 mb-0.5 items-end content-end" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="19.5" cy="19.5" r="1.5" fill="currentColor"/><path fill="currentColor" d="M17 5.92L9 2v18H7v-1.73c-1.79.35-3 .99-3 1.73c0 1.1 2.69 2 6 2s6-.9 6-2c0-.99-2.16-1.81-5-1.97V8.98l6-3.06z"/></svg>
             <span class="flex inline-flex  gap-2 font-light text-3xl"><span class="self-end">{{activeCourse !== 'All' ? '' + activeCourse : 'All Scorecards'}}</span> </span>
-            <span class="text-sm mb-1 text-white ml-2">({{filteredResults && filteredResults.length}} results)</span>
+            <span class="text-base items-end content-end self-end flex mb-0.5 italic text-gray-500 ml-2">{{filteredResults && filteredResults.length}} results</span>
           </h1>
-          <div v-if="activeCourse.toLowerCase() !== 'all'" class="font-regular flex text-sm text-base gap-3 flex text-white">
+          <div v-if="activeCourse.toLowerCase() !== 'all'" class="font-light flex text-base  text-base gap-3 flex text-white">
             <span><span class="font-semibold text-green-400">{{numberOfPlayersWithScorecards}}</span> of <span class="text-blue-400 font-semibold">{{totalNumberOfPlayers}} League Players</span> have completed this course while <span class="font-semibold text-orange-400">{{numberOfPlayersMissingScorecards}}</span> players remain.</span>
           </div>
 
@@ -166,7 +167,7 @@
           <!-- Sort dropdown -->
 
           <Menu as="div" class="self-center justify-end align-middle flex flex-grow relative flex gap-4">
-                        <span class="flex items-center gap-2 inline-flex mx-2 border rounded bg-blue-600 border-indigo-900 p-1 px-4 cursor-pointer text-base leading-6 text-white" @click="generateReport()">
+          <span class="flex items-center gap-2 inline-flex mx-2 border rounded bg-indigo-700 border-indigo-900 p-1 px-4 cursor-pointer text-base leading-6 text-white" @click="generateReport()">
               <svg class="w-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 19H8q-.825 0-1.413-.588T6 17V3q0-.825.588-1.413T8 1h7l6 6v10q0 .825-.588 1.413T19 19ZM14 8V3H8v14h11V8h-5ZM4 23q-.825 0-1.413-.588T2 21V7h2v14h11v2H4ZM8 3v5v-5v14V3Z"/></svg>
             Create Full Report
           </span>
@@ -197,12 +198,13 @@
         <div class="text-3xl text-white justify-center align-middle w-full h-full" v-if="isLoading">
           Loading...
         </div>
+
         <div v-else>
         <div class="text-white" v-if="router.currentRoute.value.name === 'players'">
           <PlayerItem :list="players"  @handleFilter="(card) => getScorecard(card)"/>
         </div>
-       <div v-if="router.currentRoute.value.name === 'index' && activeCourse.toLowerCase() !== 'll' && !isLoading">
-        <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecardItem(card)"/>
+       <div class="" v-if="router.currentRoute.value.name === 'index' && activeCourse.toLowerCase() !== 'll' && !isLoading">
+         <ListItem :list="filteredResults" :active="activeRecord"  @handleFilter="(card) => getScorecardItem(card)"/>
        </div>
           <div v-if="router.currentRoute.value.name === 'upload'">
             <p @click="submitData()" class="text-3xl text-white">submitIt()
@@ -265,7 +267,7 @@
 
 
     <!-- MODAL  -->
-    <Modal v-model="showModal" :csvData="csvData"/>
+    <Modal v-model="showModal" :activeCourse="activeCourse" :activeRecord="filteredResults.filter((scorecard) => scorecard.dbId === activeRecord)" :csvData="csvData"/>
   </div>
 
 
@@ -312,7 +314,12 @@ const activeCourse = ref('All')
 const courses = ref([])
 const results = ref([])
 const csvData = ref('');
-
+const datatest= ref([
+  {id: 1, fruit: 'Apple', price: 4.50, unit: 'lb'},
+  {id: 2, fruit: 'Blueberry', price: 3.00, unit: 'lb'},
+  {id: 3, fruit: 'Pineapple', price: 5.15, unit: 'each'},
+])
+ const   fields  = ref(['fruit', 'price', 'unit'])
 const players = ref([])
 const navigation = [
   { name: 'Scorecards', href: '/', icon: ServerIcon, current: true },
