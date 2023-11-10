@@ -21,7 +21,6 @@
           </h2>
         </div>
         <div class="mt-1.5 flex items-center gap-x-2.5 text-sm leading-5 text-gray-400">
-          <span :class="['text-white ml-6 truncate ', props.active === scorecard.dbId && 'text-green-400']"> {{ new Date(scorecard.createdAt).toLocaleDateString('en-us', {weekday: "short", year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "numeric"})  }}</span>
 
           <div class="tag">
                         <span v-if="scorecard.isCompleted" class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800">

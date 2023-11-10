@@ -15,13 +15,13 @@
             </tr>
             </thead>
             <tbody class="">
-            <tr v-for="(player, i) in props.list" :key="player.userName" class="even:bg-gray-800">
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.skins ? "Paid" : ""}}</td>
-              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-3">{{ player.realName}}</td>
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.userName}}</td>
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.flight}}</td>
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.handicap}}</td>
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ player.notes}}</td>
+            <tr v-for="(playerHelper, i) in props.list" :key="player.userName" class="even:bg-gray-800">
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ playerHelper.skins ? "Paid" : ""}}</td>
+              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-3">{{ playerHelper.realName}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ playerHelper.userName}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ playerHelper.flight}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ playerHelper.handicap}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ playerHelper.notes}}</td>
             </tr>
             </tbody>
           </table>

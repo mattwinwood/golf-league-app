@@ -123,7 +123,7 @@ export default {
     return csvContent;
   },
   adjustScore (holeNumber, grossScore) {
-    if (!grossScore) return 0; // if player picked up
+    if (!grossScore) return 0; // if playerHelper picked up
 
     switch (holeNumber) {
       case 3:
