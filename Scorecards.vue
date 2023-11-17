@@ -80,7 +80,6 @@ const props = defineProps({
 const emit = defineEmits(["handleFilterValue"]);
 
 import ScorecardComponent from "./components/ScorecardComponent.vue";
-import GolfScorecard from "./helpers/GolfScorecard.ts"
 const scorecards = ref([])
 const scorecard = ref([])
 const players = ref([])

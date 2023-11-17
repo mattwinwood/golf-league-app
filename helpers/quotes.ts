@@ -1,0 +1,60 @@
+const quotes = {
+    quoteList: () => {
+        return [
+        "My golf game's gone missing. If you see it, let me know—I'll be in the bar.",
+        "Golf is a sport where you yell 'fore,' shoot six, and write down five.",
+        "Golf is the only sport where you can lose a ball in the middle of a wide-open fairway.",
+        "The best golfer in the world is the one having the most fun.",
+        "Golf is like taxes. You drive hard to get to the green, and then you wind up in the hole.",
+        "The only time my prayers are never answered is on the golf course.",
+        "If you think it's hard to meet new people, try picking up the wrong golf ball.",
+        "I don't need anger management; I need people to stop pissing me off while I'm golfing.",
+        "Golf is a game where you can't win; you can only do less poorly.",
+        "The difference between a golfer and a skydiver? A golfer screams 'Fore!' and a skydiver yells 'Four!'",
+        "Golf is a great way to ruin a good walk.",
+        "The only thing in my bag that works is the bug spray.",
+        "I'm not saying my golf game is bad, but if I grew tomatoes, they'd come up sliced.",
+        "Golf: the only sport where you can wear a tuxedo and nobody thinks it's weird.",
+        "I have a tip that can take five strokes off anyone's golf game: It's called an eraser.",
+        "Golf is a game invented by the same people who think music comes out of a bagpipe.",
+        "I'm not superstitious, but I am a little stitious when it comes to my golf game.",
+        "Golf is a lot like life. When you hit a bad shot, you just have to keep going.",
+        "Golf is the only sport where you can actually lose a ball and still win the game.",
+        "Life is like a round of golf. Sometimes you get a hole in one, and sometimes you end up in the sand trap.",
+        "Golf is the only sport where the most feared opponent is you.",
+        "I'm not addicted to golf; I can quit as soon as I get my swing right.",
+        "Golf is a game in which you yell 'fore,' shoot six, and write down five.",
+        "Golf is a game that's based on honesty, and that's why there are so few golfers.",
+        "I don't always golf, but when I do, I'm terrible.",
+        "Golf: A sport that combines the consistent frustration of hitting a ball into a hole with the intermittent satisfaction of doing it.",
+        "The worst day of golf beats the best day of work.",
+        "Golf is the only sport where you can be a complete hacker one day and a pro the next... or even the other way around.",
+        "I've spent most of my life golfing; the rest, I've just wasted.",
+        "Golf is the closest game to the game we call life. You get bad breaks from good shots; you get good breaks from bad shots, but you have to play the ball where it lies. - Bobby Jones",
+        "Success in this game depends less on strength of body than strength of mind and character. - Arnold Palmer",
+        "The most important shot in golf is the next one. - Ben Hogan",
+        "Golf is a game of inches. The most important are the six inches between your ears. - Arnold Palmer",
+        "Golf is deceptively simple and endlessly complicated. - Arnold Palmer",
+        "The most rewarding things you do in life are often the ones that look like they cannot be done. - Arnold Palmer",
+        "Golf is a puzzle without an answer. I've played the game for 50 years, and I still haven't the slightest idea of how to play. - Gary Player",
+        "The harder you work, the luckier you get. - Gary Player",
+        "I know I am getting better at golf because I'm hitting fewer spectators. - Gerald R. Ford",
+        "Golf is a game of ego, but it is also a game of integrity: the most important thing is you do what is right when no one is looking. - Tom Watson",
+        "Golf is not a sport. It's a way of life. - Arnold Palmer",
+        "Golf is about how well you accept, respond to, and score with your misses much more so than it is a game of your perfect shots. - Dr. Bob Rotella",
+        "The golf swing is like a suitcase into which we are trying to pack one too many things. - John Updike",
+        "It took me 17 years to get 3,000 hits in baseball. I did it in one afternoon on the golf course. - Hank Aaron",
+        "The only thing a golfer needs is more daylight. - Ben Hogan",
+        "Happiness is a long walk with a putter. - Greg Norman",
+        "The most important shot in golf is the next one. - Ben Hogan",
+        "Golf is a compromise between what your ego wants you to do, what experience tells you to do, and what your nerves let you do. - Bruce Crampton",
+        "Golf is a game of patience, persistence, and precision. - Vijay Singh"
+    ]
+    },
+
+    generateRandomQuote : () => {
+        const randomIndex = Math.floor(Math.random() * quotes.quoteList().length);
+        return quotes.quoteList()[randomIndex];
+    },
+}
+export default quotes;
