@@ -89,7 +89,7 @@ function hasDuplicateProperty(value) {
 
 function getPlayerFullName(username){
   const matchingPlayers  = players.value.filter(item => {
-    return item.userName === username;
+    return item.userName.includes(username);
   })
   if(matchingPlayers.length > 0) {
     return matchingPlayers[0].realName

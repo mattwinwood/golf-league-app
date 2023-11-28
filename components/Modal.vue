@@ -116,12 +116,13 @@ function matchPlayersWithScorecards() {
   ));
 
   playersWithScorecards.value = players.value.filter((player) =>
-      playerNamesWithScorecards.has(player.userName.toUpperCase())
+                                                       player.userName.some(name => playerNamesWithScorecards.has(name.toUpperCase()))
+  );
+  playersMissingScorecards.value = players.value.filter((player) =>
+                                                          player.userName.every(name => !playerNamesWithScorecards.has(name.toUpperCase()))
   );
 
-  playersMissingScorecards.value = players.value.filter((player) =>
-      !playerNamesWithScorecards.has(player.userName.toUpperCase())
-  );
+
 }
 
 const copy = () => {
@@ -151,7 +152,7 @@ const showModal = computed({
   }
 });
 const getRealName = () => {
-  const userName = props.activeRecord[0].player.name
+  const userName = props.activeRecord[0].player.name[0]
   const playerRecord = playerHelper.getPlayerRecord(userName)
   if (playerRecord && playerRecord.realName) {
     return `${playerRecord.realName} (${userName})`
@@ -168,4 +169,3 @@ const save = () => {
 
 }
 </script>
-

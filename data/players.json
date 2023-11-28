@@ -3,7 +3,7 @@
     "players":
     [
       {
-        "userName": "Andrewcaudill",
+        "userName": ["Andrewcaudill"],
         "realName": "Andy Caudill",
         "flight": "A",
         "handicap": 3,
@@ -11,7 +11,7 @@
         "notes": ""
       },
       {
-        "userName": "Joey bad eyes 2",
+        "userName": ["Joey bad eyes 2"],
         "realName": "Joe Bourdage",
         "flight": "A",
         "handicap": 4,
@@ -19,7 +19,7 @@
         "notes": ""
       },
       {
-        "userName": "Steve-O33",
+        "userName": ["Steve-O33"],
         "realName": "Steve Myers",
         "flight": "A",
         "handicap": 5,
@@ -27,7 +27,7 @@
         "notes": ""
       },
       {
-        "userName": "JPatton2522",
+        "userName": ["JPatton2522"],
         "realName": "Jared Patton",
         "flight": "A",
         "handicap": 2,
@@ -35,7 +35,7 @@
         "notes": ""
       },
       {
-        "userName": "TIm Gallagher",
+        "userName": ["TIm Gallagher"],
         "realName": "Tim Gallagher",
         "flight": "A",
         "handicap": 6,
@@ -43,7 +43,7 @@
         "notes": ""
       },
       {
-        "userName": "Steve786",
+        "userName": ["Steve786"],
         "realName": "Steve Skowronek",
         "flight": "A",
         "handicap": 6,
@@ -51,7 +51,7 @@
         "notes": ""
       },
       {
-        "userName": "Kevin Winwood",
+        "userName": ["Kevin Winwood"],
         "realName": "Kevin Winwood",
         "flight": "A",
         "handicap": 5,
@@ -59,7 +59,7 @@
         "notes": ""
       },
       {
-        "userName": "JeffCat",
+        "userName": ["JeffCat", "JEFF CAT"],
         "realName": "Jeff Catanzarite",
         "flight": "A",
         "handicap": 6,
@@ -67,7 +67,7 @@
         "notes": ""
       },
       {
-        "userName": "srkorb",
+        "userName": ["srkorb"],
         "realName": "Steve Korb",
         "flight": "A",
         "handicap": 5,
@@ -75,7 +75,7 @@
         "notes": ""
       },
       {
-        "userName": "Vic Falk",
+        "userName": ["Vic Falk"],
         "realName": "Vic Falk",
         "flight": "A",
         "handicap": 3,
@@ -83,7 +83,7 @@
         "notes": ""
       },
       {
-        "userName": "Haddy719",
+        "userName": ["Haddy719"],
         "realName": "Chad Barnett",
         "flight": "A",
         "handicap": 4,
@@ -91,7 +91,7 @@
         "notes": ""
       },
       {
-        "userName": "ToddDirling",
+        "userName": ["ToddDirling"],
         "realName": "Todd Dirling",
         "flight": "A",
         "handicap": 5,
@@ -99,7 +99,7 @@
         "notes": ""
       },
       {
-        "userName": "D.Manning",
+        "userName": ["D.Manning"],
         "realName": "Dylan Manning",
         "flight": "A",
         "handicap": 6,
@@ -107,7 +107,7 @@
         "notes": ""
       },
       {
-        "userName": "Josiah",
+        "userName": ["Josiah"],
         "realName": "Josiah Nowak",
         "flight": "A",
         "handicap": 2,
@@ -115,7 +115,7 @@
         "notes": ""
       },
       {
-        "userName": "ed15642",
+        "userName": ["ed15642"],
         "realName": "Ed Waibel",
         "flight": "A",
         "handicap": 6,
@@ -123,7 +123,7 @@
         "notes": ""
       },
       {
-        "userName": "matthew irwin",
+        "userName": ["matthew irwin"],
         "realName": "Matt Irwin",
         "flight": "A",
         "handicap": 3,
@@ -131,7 +131,7 @@
         "notes": ""
       },
       {
-        "userName": "Tim Boo",
+        "userName": ["Tim Boo"],
         "realName": "Tim Booher",
         "flight": "A",
         "handicap": 5,
@@ -139,7 +139,7 @@
         "notes": ""
       },
       {
-        "userName": "Ryan Neel",
+        "userName": ["Ryan Neel"],
         "realName": "Ryan Neel",
         "flight": "A",
         "handicap": 6,
@@ -147,7 +147,7 @@
         "notes": ""
       },
       {
-        "userName": "KevinJames",
+        "userName": ["KevinJames"],
         "realName": "Brett Greenier",
         "flight": "A",
         "handicap": 5,
@@ -155,7 +155,7 @@
         "notes": ""
       },
       {
-        "userName": "JTC45",
+        "userName": ["JTC45"],
         "realName": "James Carney",
         "flight": "A",
         "handicap": 2,
@@ -163,7 +163,7 @@
         "notes": ""
       },
       {
-        "userName": "Justin Dickert",
+        "userName": ["Justin Dickert"],
         "realName": "Justin Dickert",
         "flight": "B",
         "handicap": 8,
@@ -171,7 +171,7 @@
         "notes": ""
       },
       {
-        "userName": "dpici",
+        "userName": ["dpici"],
         "realName": "Dylan Pici",
         "flight": "B",
         "handicap": 6,
@@ -179,7 +179,7 @@
         "notes": ""
       },
       {
-        "userName": "Glenn Grasha",
+        "userName": ["Glenn Grasha"],
         "realName": "Glenn Grasha",
         "flight": "B",
         "handicap": 8,
@@ -187,7 +187,7 @@
         "notes": ""
       },
       {
-        "userName": "ammondom",
+        "userName": ["ammondom"],
         "realName": "Dominic Ammon",
         "flight": "B",
         "handicap": 7,
@@ -195,7 +195,7 @@
         "notes": ""
       },
       {
-        "userName": "Corey Amaya",
+        "userName": ["Corey Amaya"],
         "realName": "Corey Amaya",
         "flight": "B",
         "handicap": 7,
@@ -203,7 +203,7 @@
         "notes": ""
       },
       {
-        "userName": "Eerrok11",
+        "userName": ["Eerrok11"],
         "realName": "Eric Hampton",
         "flight": "B",
         "handicap": 7,
@@ -211,7 +211,7 @@
         "notes": ""
       },
       {
-        "userName": "Ga",
+        "userName": ["Ga"],
         "realName": "Glenn Reed",
         "flight": "B",
         "handicap": 8,
@@ -219,7 +219,7 @@
         "notes": ""
       },
       {
-        "userName": "Tjdub",
+        "userName": ["Tjdub"],
         "realName": "Ty Webb",
         "flight": "B",
         "handicap": 8,
@@ -227,7 +227,7 @@
         "notes": ""
       },
       {
-        "userName": "Paul Bug",
+        "userName": ["Paul Bug"],
         "realName": "Paul Bugajski",
         "flight": "B",
         "handicap": 8,
@@ -235,7 +235,7 @@
         "notes": ""
       },
       {
-        "userName": "Chasing Bogeys",
+        "userName": ["Chasing Bogeys"],
         "realName": "Taylor Hoffman",
         "flight": "B",
         "handicap": 8,
@@ -243,7 +243,7 @@
         "notes": ""
       },
       {
-        "userName": "Gatti",
+        "userName": ["Gatti"],
         "realName": "Steve Gatti",
         "flight": "B",
         "handicap": 7,
@@ -251,7 +251,7 @@
         "notes": ""
       },
       {
-        "userName": "Kaylee Falk",
+        "userName": ["Kaylee Falk"],
         "realName": "Kaylee Falk",
         "flight": "B",
         "handicap": 8,
@@ -259,7 +259,7 @@
         "notes": ""
       },
       {
-        "userName": "garrett staff",
+        "userName": ["garrett staff"],
         "realName": "Garrett Staff",
         "flight": "B",
         "handicap": 8,
@@ -267,7 +267,7 @@
         "notes": ""
       },
       {
-        "userName": "dpelczar",
+        "userName": ["dpelczar"],
         "realName": "Dan Pelczar",
         "flight": "B",
         "handicap": 9,
@@ -275,7 +275,7 @@
         "notes": ""
       },
       {
-        "userName": "Joe Dyce",
+        "userName": ["Joe Dyce"],
         "realName": "Joe Fordyce",
         "flight": "B",
         "handicap": 7,
@@ -283,7 +283,7 @@
         "notes": ""
       },
       {
-        "userName": "Jon Wik",
+        "userName": ["Jon Wik"],
         "realName": "Jon Wik",
         "flight": "B",
         "handicap": 9,
@@ -291,7 +291,7 @@
         "notes": ""
       },
       {
-        "userName": "Jake Bobak",
+        "userName": ["Jake Bobak"],
         "realName": "Jake Bobak",
         "flight": "B",
         "handicap": 8,
@@ -299,7 +299,7 @@
         "notes": ""
       },
       {
-        "userName": "zcho66",
+        "userName": ["zcho66"],
         "realName": "Zach Davison",
         "flight": "B",
         "handicap": 9,
@@ -307,7 +307,7 @@
         "notes": ""
       },
       {
-        "userName": "Matt Winwood",
+        "userName": ["Matt Winwood"],
         "realName": "Matt Winwood",
         "flight": "B",
         "handicap": 8,
@@ -315,7 +315,7 @@
         "notes": ""
       },
       {
-        "userName": "Fore on the green",
+        "userName": ["Fore on the green"],
         "realName": "Rob Holderbaum",
         "flight": "C",
         "handicap": 10,
@@ -323,7 +323,7 @@
         "notes": ""
       },
       {
-        "userName": "mswankler",
+        "userName": ["mswankler"],
         "realName": "Marc Swankler",
         "flight": "C",
         "handicap": 10,
@@ -331,7 +331,7 @@
         "notes": ""
       },
       {
-        "userName": "Ryan_Putters35",
+        "userName": ["Ryan_Putters35"],
         "realName": "Ryan Peters",
         "flight": "C",
         "handicap": 12,
@@ -339,7 +339,7 @@
         "notes": ""
       },
       {
-        "userName": "Shauna Caudill",
+        "userName": ["Shauna Caudill"],
         "realName": "Shauna Caudill",
         "flight": "C",
         "handicap": 13,
@@ -347,7 +347,7 @@
         "notes": ""
       },
       {
-        "userName": "Jason Pechunka",
+        "userName": ["Jason Pechunka"],
         "realName": "Jason Pechunka",
         "flight": "C",
         "handicap": 13,
@@ -355,7 +355,7 @@
         "notes": ""
       },
       {
-        "userName": "ROB VASKO",
+        "userName": ["ROB VASKO"],
         "realName": "Rob Vasko",
         "flight": "C",
         "handicap": 11,
@@ -363,7 +363,7 @@
         "notes": ""
       },
       {
-        "userName": "kylegeller10",
+        "userName": ["kylegeller10"],
         "realName": "Kyle Geller",
         "flight": "C",
         "handicap": 10,
@@ -371,7 +371,7 @@
         "notes": ""
       },
       {
-        "userName": "STEVE BUSCHE",
+        "userName": ["STEVE BUSCHE"],
         "realName": "Steve Busche",
         "flight": "C",
         "handicap": 11,
@@ -379,7 +379,7 @@
         "notes": ""
       },
       {
-        "userName": "FLOAT",
+        "userName": ["FLOAT"],
         "realName": "Mike Float",
         "flight": "C",
         "handicap": 12,
@@ -387,7 +387,7 @@
         "notes": ""
       },
       {
-        "userName": "Lippy0213",
+        "userName": ["Lippy0213"],
         "realName": "Bill Lipsky",
         "flight": "C",
         "handicap": 13,
@@ -395,7 +395,7 @@
         "notes": ""
       },
       {
-        "userName": "Beef Stew",
+        "userName": ["Beef Stew"],
         "realName": "Jeff Stewart",
         "flight": "C",
         "handicap": 13,
@@ -403,7 +403,7 @@
         "notes": ""
       },
       {
-        "userName": "Joel D.",
+        "userName": ["Joel D."],
         "realName": "Joel DeFelice",
         "flight": "C",
         "handicap": 10,
@@ -411,7 +411,7 @@
         "notes": ""
       },
       {
-        "userName": "Snake Blitzken",
+        "userName": ["Snake Blitzken"],
         "realName": "Jake DeFelice",
         "flight": "C",
         "handicap": 13,
@@ -419,7 +419,7 @@
         "notes": ""
       },
       {
-        "userName": "Holder2",
+        "userName": ["Holder2"],
         "realName": "Dan Holder",
         "flight": "C",
         "handicap": 15,
@@ -427,7 +427,7 @@
         "notes": ""
       },
       {
-        "userName": "Mark Borger",
+        "userName": ["Mark Borger"],
         "realName": "Mark Borger",
         "flight": "C",
         "handicap": 10,
@@ -435,7 +435,7 @@
         "notes": ""
       },
       {
-        "userName": "Neeno",
+        "userName": ["Neeno"],
         "realName": "Mike Steffenino",
         "flight": "C",
         "handicap": 11,
@@ -443,7 +443,7 @@
         "notes": ""
       },
       {
-        "userName": "Shaun Kovac",
+        "userName": ["Shaun Kovac"],
         "realName": "Shaun Kovac",
         "flight": "C",
         "handicap": 10,
@@ -451,7 +451,7 @@
         "notes": ""
       },
       {
-        "userName": "DrDoback",
+        "userName": ["DrDoback"],
         "realName": "Dan Birdseye",
         "flight": "C",
         "handicap": 13,
@@ -459,7 +459,7 @@
         "notes": ""
       },
       {
-        "userName": "Captain Consript",
+        "userName": ["Captain Consript"],
         "realName": "Sean Darby",
         "flight": "C",
         "handicap": 14,
@@ -467,7 +467,7 @@
         "notes": ""
       },
       {
-        "userName": "Gmd658",
+        "userName": ["Gmd658"],
         "realName": "Grant Darby",
         "flight": "D",
         "handicap": 26,
@@ -475,7 +475,7 @@
         "notes": ""
       },
       {
-        "userName": "JCarns",
+        "userName": ["JCarns"],
         "realName": "Justin Caras",
         "flight": "D",
         "handicap": 20,
@@ -483,7 +483,7 @@
         "notes": ""
       },
       {
-        "userName": "Karen Irwin",
+        "userName": ["Karen Irwin"],
         "realName": "Karen Irwin",
         "flight": "D",
         "handicap": 15,
@@ -491,7 +491,7 @@
         "notes": ""
       },
       {
-        "userName": "TED BUSCHE",
+        "userName": ["TED BUSCHE"],
         "realName": "Ted Busche",
         "flight": "D",
         "handicap": 19,
@@ -499,7 +499,7 @@
         "notes": ""
       },
       {
-        "userName": "LeeAnnZ",
+        "userName": ["LeeAnnZ"],
         "realName": "LeeAnn Zeise",
         "flight": "D",
         "handicap": 23,
@@ -507,7 +507,7 @@
         "notes": ""
       },
       {
-        "userName": "Jeremy S. Bucklew",
+        "userName": ["Jeremy S. Bucklew"],
         "realName": "Jeremy S. Bucklew",
         "flight": "D",
         "handicap": 15,
@@ -515,7 +515,7 @@
         "notes": ""
       },
       {
-        "userName": "STate04",
+        "userName": ["STate04"],
         "realName": "Sean Tate",
         "flight": "D",
         "handicap": 29,
@@ -523,7 +523,7 @@
         "notes": ""
       },
       {
-        "userName": "Joseph D.D",
+        "userName": ["Joseph D.D"],
         "realName": "Joe DeFelice",
         "flight": "D",
         "handicap": 16,
@@ -531,7 +531,7 @@
         "notes": ""
       },
       {
-        "userName": "ClosedCaption",
+        "userName": ["ClosedCaption"],
         "realName": "Heather Lowe",
         "flight": "D",
         "handicap": 17,
@@ -539,7 +539,7 @@
         "notes": ""
       },
       {
-        "userName": "Snoburn",
+        "userName": ["Snoburn"],
         "realName": "Dylan Arrabito",
         "flight": "D",
         "handicap": 21,
@@ -547,7 +547,7 @@
         "notes": ""
       },
       {
-        "userName": "awingard29",
+        "userName": ["awingard29"],
         "realName": "Anna Wingard",
         "flight": "D",
         "handicap": 20,
@@ -555,7 +555,7 @@
         "notes": ""
       },
       {
-        "userName": "chasing quads",
+        "userName": ["chasing quads"],
         "realName": "Ashley Edmondson",
         "flight": "D",
         "handicap": 25,
@@ -563,7 +563,7 @@
         "notes": ""
       },
       {
-        "userName": "Cody Stark",
+        "userName": ["Cody Stark"],
         "realName": "Cody Stark",
         "flight": "D",
         "handicap": 25,
@@ -571,7 +571,7 @@
         "notes": ""
       },
       {
-        "userName": "Brandon F",
+        "userName": ["Brandon F"],
         "realName": "Brandon Ferrari",
         "flight": "D",
         "handicap": 24,
@@ -579,7 +579,7 @@
         "notes": ""
       },
       {
-        "userName": "Darlene52",
+        "userName": ["Darlene52"],
         "realName": "Darlene Skupien",
         "flight": "D",
         "handicap": 22,
@@ -587,7 +587,7 @@
         "notes": ""
       },
       {
-        "userName": "Mcat",
+        "userName": ["Mcat"],
         "realName": "Meg Catanzarite",
         "flight": "D",
         "handicap": 19,

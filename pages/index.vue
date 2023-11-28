@@ -354,12 +354,10 @@ function sortByType(sortable, value) {
 }
 
 async function submitData() {
-  console.log("submitted");
   const updated = updatedJsonData.value
   const {body} = await $fetch('/api/update', {
     method: 'post',
     body: {updated}
   })
-  console.log("body", body);
 }
 </script>
