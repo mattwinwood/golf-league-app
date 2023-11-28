@@ -15,7 +15,7 @@
               <span :class="['truncate text-xl font-semibold', props.active === scorecard.dbId && 'text-green-400']">{{ getPlayerFullName(scorecard.player.name) }} <span class="font-regular text-sm italic">({{scorecard.player.name}})</span></span>
               <div class="">
               <span class="text-gray-400 mx-2 text-xl">@</span>
-              <span :class="['truncate font-light text-lg', props.active === scorecard.dbId && 'text-green-400']"> {{ scorecard.course.displayName }}</span><span class="text-gray-400 text-base font-semibold pl-2 pr-1">Date: </span><span class="text-base font-semibold ">{{ getDate(scorecard.createdAt) }}</span>
+              <span :class="['truncate font-light text-lg', props.active === scorecard.dbId && 'text-green-400']"> {{ scorecard.course.displayName }}</span><span class="text-gray-400 text-lg font-semibold pl-2 pr-1">Date: </span><span class="text-base font-semibold ">{{ getDate(scorecard.createdAt) }}</span>
               </div>
             </a>
           </h2>
@@ -58,7 +58,7 @@
               <svg class="h-1.5 w-1.5 fill-gray-400" viewBox="0 0 6 6" aria-hidden="true">
                 <circle cx="3" cy="3" r="3" />
               </svg>
-            {{hasDuplicateProperty(scorecard.player.name)}} Matches
+            Has {{hasDuplicateProperty(scorecard.player.name)}} Duplicate Records
             </span>
           </div>
 
