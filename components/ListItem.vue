@@ -15,7 +15,7 @@
               <span :class="['truncate text-xl font-semibold', props.active === scorecard.dbId && 'text-green-400']">{{ getPlayerFullName(scorecard.player.name) }} <span class="font-regular text-sm italic">({{scorecard.player.name}})</span></span>
               <div class="">
               <span class="text-gray-400 mx-2 text-xl">@</span>
-              <span :class="['truncate font-light text-lg', props.active === scorecard.dbId && 'text-green-400']"> {{ scorecard.course.displayName }}</span>
+              <span :class="['truncate font-light text-lg', props.active === scorecard.dbId && 'text-green-400']"> {{ scorecard.course.displayName }}</span><span class="text-gray-400 text-base font-semibold pl-2 pr-1">Date: </span><span class="text-base font-semibold ">{{ getDate(scorecard.createdAt) }}</span>
               </div>
             </a>
           </h2>
@@ -86,6 +86,22 @@ function hasDuplicateProperty(value) {
   const results = props.list.filter(item => item.player.name.toLowerCase().trim() === value.toLowerCase().trim())
   return results.length
 }
+function getDate() {
+  let dateObj = new Date();
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let month = months[dateObj.getMonth()];
+  let day = dateObj.getUTCDate();
+  let year = dateObj.getUTCFullYear();
+  let hours = dateObj.getHours();
+  let minute = dateObj.getMinutes();
+  let ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minute = minute < 10 ? '0' + minute : minute; // adding leading zero to minutes less than 10
+
+  return `${month} ${day}, ${year} ${hours}:${minute}${ampm}`;
+}
+
 
 function getPlayerFullName(username){
   const matchingPlayers  = players.value.filter(item => {
